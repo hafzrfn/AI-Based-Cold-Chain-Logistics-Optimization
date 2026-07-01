@@ -6,7 +6,7 @@ import axios from 'axios';
  */
 
 // Base URL for the backend API
-const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app/';
+const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app/api';
 
 // Create a reusable axios instance with default config
 const apiClient = axios.create({
