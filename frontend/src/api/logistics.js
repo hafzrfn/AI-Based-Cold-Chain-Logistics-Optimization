@@ -6,7 +6,7 @@ import axios from 'axios';
  */
 
 // Base URL for the backend API
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://coldchain-backend.onrender.com/api';
 
 // Create a reusable axios instance with default config
 const apiClient = axios.create({
