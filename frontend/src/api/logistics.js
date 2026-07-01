@@ -6,7 +6,7 @@ import axios from 'axios';
  */
 
 // Base URL for the backend API
-const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app/api';
+const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app';
 
 // Create a reusable axios instance with default config
 const apiClient = axios.create({
@@ -25,7 +25,7 @@ const apiClient = axios.create({
  * @returns {Promise<object>} Logistics calculation results
  */
 export const calculateLogistics = async (selectedFoodIds, origin, destination) => {
-  const response = await apiClient.post('/calculate', {
+  const response = await apiClient.post('/api/calculate', {
     foods: selectedFoodIds,
     origin: {
       lat: origin.lat,
@@ -46,7 +46,7 @@ export const calculateLogistics = async (selectedFoodIds, origin, destination) =
  * @returns {Promise<object[]>} Array of food items
  */
 export const fetchFoods = async () => {
-  const response = await apiClient.get('/foods');
+  const response = await apiClient.get('/api/foods');
   return response.data;
 };
 
@@ -55,6 +55,6 @@ export const fetchFoods = async () => {
  * @returns {Promise<object>} Health status
  */
 export const healthCheck = async () => {
-  const response = await apiClient.get('/health');
+  const response = await apiClient.get('/api/health');
   return response.data;
 };
