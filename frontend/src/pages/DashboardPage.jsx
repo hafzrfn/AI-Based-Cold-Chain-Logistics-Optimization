@@ -20,7 +20,7 @@ function DashboardPage() {
     async function fetchData() {
       try {
         const res = await axios.get('http://localhost:5000/api/network-insights').catch(() => 
-          axios.get('/api/network-insights') // fallback
+          axios.get(`${API_BASE_URL}/api/network-insights`) // fallback to correct backend
         );
         setData(res.data);
       } catch (err) {

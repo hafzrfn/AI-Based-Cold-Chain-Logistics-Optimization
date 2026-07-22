@@ -10,6 +10,8 @@ import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
+const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app';
+
 let DefaultIcon = L.icon({
   iconUrl,
   iconRetinaUrl,
@@ -38,7 +40,7 @@ function OperationsPage() {
     async function fetchSchedule() {
       try {
         const res = await axios.get('http://localhost:5000/api/schedule').catch(() =>
-          axios.get('/api/schedule')
+          axios.get(`${API_BASE_URL}/api/schedule`)
         );
         setScheduleData(res.data);
       } catch (err) {
@@ -53,7 +55,7 @@ function OperationsPage() {
     try {
       const waypoints = [depot, ...destinations];
       const res = await axios.post('http://localhost:5000/api/milkrun', { waypoints }).catch(() =>
-        axios.post('/api/milkrun', { waypoints })
+        axios.post(`${API_BASE_URL}/api/milkrun`, { waypoints })
       );
       setMilkRunResult(res.data);
     } catch (err) {
