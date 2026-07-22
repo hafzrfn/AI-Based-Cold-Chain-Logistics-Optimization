@@ -13,6 +13,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from calculator import calculate_logistics
 from models import get_all_foods, save_calculation_result
+from operations import optimize_milk_run, calculate_cpm_pert
 
 # ========== APP SETUP ==========
 
@@ -79,8 +80,11 @@ def calculate():
     Expected JSON body:
     {
         "foods": ["chicken", "milk", ...],
-        "origin": { "lat": 13.75, "lng": 100.5, "name": "Bangkok" },
-        "destination": { "lat": 35.68, "lng": 139.69, "name": "Tokyo" }
+        "waypoints": [
+            { "lat": 13.75, "lng": 100.5, "name": "Bangkok" },
+            { "lat": 35.68, "lng": 139.69, "name": "Tokyo" }
+        ],
+        "drivingDistanceKm": 4500
     }
     """
     data = request.get_json()
@@ -90,17 +94,16 @@ def calculate():
         return jsonify({'error': 'No data provided'}), 400
     
     food_ids = data.get('foods', [])
-    origin = data.get('origin')
-    destination = data.get('destination')
+    waypoints = data.get('waypoints', [])
+    driving_distance_km = data.get('drivingDistanceKm')
 
     if not food_ids:
         return jsonify({'error': 'No foods selected'}), 400
-    if not origin or not destination:
-        return jsonify({'error': 'Origin and destination are required'}), 400
-    if 'lat' not in origin or 'lng' not in origin:
-        return jsonify({'error': 'Origin must have lat and lng'}), 400
-    if 'lat' not in destination or 'lng' not in destination:
-        return jsonify({'error': 'Destination must have lat and lng'}), 400
+    if not waypoints or len(waypoints) < 2:
+        return jsonify({'error': 'At least two waypoints are required'}), 400
+    for wp in waypoints:
+        if 'lat' not in wp or 'lng' not in wp:
+            return jsonify({'error': 'All waypoints must have lat and lng'}), 400
 
     # Look up food data for each selected food ID
     foods = []
@@ -112,17 +115,43 @@ def calculate():
             return jsonify({'error': f'Unknown food: {food_id}'}), 400
 
     # Run the calculation algorithm
-    result = calculate_logistics(foods, origin, destination)
+    result = calculate_logistics(foods, waypoints, driving_distance_km)
 
     # Save to database (non-blocking — don't fail if DB is down)
     try:
-        calc_id = save_calculation_result(food_ids, origin, destination, result)
+        calc_id = save_calculation_result(food_ids, waypoints[0], waypoints[-1], result)
         result['calculation_id'] = calc_id
     except Exception as e:
         print(f"[WARN] Failed to save to database: {e}")
 
     return jsonify(result)
 
+@app.route('/api/network-insights', methods=['GET'])
+def get_network_insights():
+    """Returns static precomputed route network analysis."""
+    import os
+    import json
+    file_path = os.path.join(os.path.dirname(__file__), 'network_insights.json')
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as f:
+            return jsonify(json.load(f))
+    return jsonify({'error': 'Insights not generated yet'}), 404
+
+@app.route('/api/milkrun', methods=['POST'])
+def milkrun():
+    """Calculates optimized milk run route for given waypoints."""
+    data = request.get_json()
+    if not data or 'waypoints' not in data:
+        return jsonify({'error': 'No waypoints provided'}), 400
+    
+    result = optimize_milk_run(data['waypoints'])
+    return jsonify(result)
+
+@app.route('/api/schedule', methods=['GET'])
+def schedule():
+    """Returns CPM and PERT analysis for cold chain operations."""
+    result = calculate_cpm_pert()
+    return jsonify(result)
 
 # ========== MAIN ==========
 

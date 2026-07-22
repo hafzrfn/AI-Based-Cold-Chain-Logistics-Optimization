@@ -1,0 +1,253 @@
+/* ============================================
+   AI Risk Assessment Panel
+   ============================================ */
+
+.risk-panel {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  animation-delay: 600ms;
+}
+
+.risk-panel-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.risk-panel-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* --- Alert Badge --- */
+
+.alert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.alert-badge.low {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.alert-badge.medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.alert-badge.high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.alert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.low .alert-dot { background: #34d399; }
+.medium .alert-dot { background: #fbbf24; }
+.high .alert-dot { background: #f87171; }
+
+/* --- Risk Grid --- */
+
+.risk-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* --- Individual Risk Card --- */
+
+.risk-card {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.risk-card:nth-child(1) { animation-delay: 700ms; }
+.risk-card:nth-child(2) { animation-delay: 850ms; }
+.risk-card:nth-child(3) { animation-delay: 1000ms; }
+
+.risk-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.risk-card-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.risk-card-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* --- Progress Bar --- */
+
+.risk-bar-track {
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 0;
+}
+
+.risk-bar-fill.animated {
+  /* width is set inline via style prop */
+}
+
+/* Risk level colors */
+.risk-low { color: #34d399; }
+.risk-low .risk-bar-fill { background: linear-gradient(90deg, #10b981, #34d399); }
+
+.risk-moderate { color: #fbbf24; }
+.risk-moderate .risk-bar-fill { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+.risk-high { color: #f87171; }
+.risk-high .risk-bar-fill { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+/* --- Composite Score Section --- */
+
+.composite-section {
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 1150ms;
+  opacity: 0;
+}
+
+.composite-gauge {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.composite-gauge svg {
+  transform: rotate(-90deg);
+}
+
+.composite-gauge-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-width: 8;
+}
+
+.composite-gauge-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              stroke 0.4s ease;
+}
+
+.composite-gauge-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.composite-score-number {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.composite-score-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.composite-info {
+  flex: 1;
+}
+
+.composite-info h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.composite-info p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.composite-weights {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.weight-tag {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2px var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  .risk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .composite-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .composite-weights {
+    justify-content: center;
+  }
+}

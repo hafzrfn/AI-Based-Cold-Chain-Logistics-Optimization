@@ -12,13 +12,16 @@ import './RouteSelectionPage.css';
  *
  * @param {string[]} selectedFoods - Array of selected food IDs
  * @param {function} onResults - Callback when results are received from the backend
+ * @param {object} advancedSettings - ML advanced settings state
+ * @param {function} setAdvancedSettings - Setter for advanced settings
  */
-function RouteSelectionPage({ selectedFoods, onResults }) {
+function RouteSelectionPage({ selectedFoods, onResults, advancedSettings, setAdvancedSettings }) {
   const navigate = useNavigate();
-  const [origin, setOrigin] = useState(null);
-  const [destination, setDestination] = useState(null);
+  const [waypoints, setWaypoints] = useState([]);
+  const [drivingDistanceKm, setDrivingDistanceKm] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showSettings, setShowSettings] = useState(false);
 
   // Get food details for the selected food IDs
   const selectedFoodDetails = selectedFoods
@@ -27,13 +30,13 @@ function RouteSelectionPage({ selectedFoods, onResults }) {
 
   // Handle the "Calculate" button click
   const handleCalculate = async () => {
-    if (!origin || !destination || selectedFoods.length === 0) return;
+    if (waypoints.length < 2 || selectedFoods.length === 0) return;
 
     setIsLoading(true);
     setError(null);
 
     try {
-      const result = await calculateLogistics(selectedFoods, origin, destination);
+      const result = await calculateLogistics(selectedFoods, waypoints, drivingDistanceKm);
       onResults(result);
       navigate('/results');
     } catch (err) {
@@ -47,7 +50,7 @@ function RouteSelectionPage({ selectedFoods, onResults }) {
     }
   };
 
-  const canCalculate = origin && destination && selectedFoods.length > 0;
+  const canCalculate = waypoints.length >= 2 && selectedFoods.length > 0;
 
   return (
     <div className="route-page">
@@ -57,7 +60,7 @@ function RouteSelectionPage({ selectedFoods, onResults }) {
         </button>
         <h1 className="route-title">Choose Your Route</h1>
         <p className="route-subtitle">
-          Click on the map to set your origin and destination points
+          Click on the map to set your origin and multiple destinations
         </p>
       </header>
 
@@ -65,10 +68,9 @@ function RouteSelectionPage({ selectedFoods, onResults }) {
         {/* Map Section */}
         <div className="route-map-section">
           <MapSelector
-            origin={origin}
-            destination={destination}
-            onSetOrigin={setOrigin}
-            onSetDestination={setDestination}
+            waypoints={waypoints}
+            onSetWaypoints={setWaypoints}
+            onSetDistance={setDrivingDistanceKm}
           />
         </div>
 
@@ -83,6 +85,54 @@ function RouteSelectionPage({ selectedFoods, onResults }) {
                 <span className="food-temp-tag">{food.optimalTemp}°C</span>
               </div>
             ))}
+          </div>
+
+          <div className="advanced-settings-container">
+            <button
+              className="btn-text"
+              style={{ padding: '0', fontSize: 'var(--font-size-sm)', marginBottom: 'var(--spacing-md)' }}
+              onClick={() => setShowSettings(!showSettings)}
+            >
+              {showSettings ? '▼ Hide' : '▶ Show'} Advanced ML Settings
+            </button>
+            
+            {showSettings && (
+              <div className="advanced-settings-panel" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-md)' }}>
+                <div className="setting-group" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
+                    Load Weight: {advancedSettings.perishableLoadTons} Tons
+                  </label>
+                  <input
+                    type="range"
+                    min="1" max="25" step="0.5"
+                    value={advancedSettings.perishableLoadTons}
+                    onChange={(e) => setAdvancedSettings({...advancedSettings, perishableLoadTons: parseFloat(e.target.value)})}
+                  />
+                </div>
+                <div className="setting-group" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
+                    Environment Humidity: {advancedSettings.humidityPct}%
+                  </label>
+                  <input
+                    type="range"
+                    min="30" max="100" step="1"
+                    value={advancedSettings.humidityPct}
+                    onChange={(e) => setAdvancedSettings({...advancedSettings, humidityPct: parseFloat(e.target.value)})}
+                  />
+                </div>
+                <div className="setting-group" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
+                    Expected Delay: {advancedSettings.delayHours} Hours
+                  </label>
+                  <input
+                    type="range"
+                    min="0" max="24" step="0.5"
+                    value={advancedSettings.delayHours}
+                    onChange={(e) => setAdvancedSettings({...advancedSettings, delayHours: parseFloat(e.target.value)})}
+                  />
+                </div>
+              </div>
+            )}
           </div>
 
           {error && (

@@ -1,6 +1,9 @@
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ResultCard from '../components/ResultCard';
+import RiskPanel from '../components/RiskPanel';
 import { ALL_FOODS } from '../data/foods';
+import { predictRisks } from '../ml_models/predict';
 import './ResultsPage.css';
 
 /**
@@ -9,9 +12,25 @@ import './ResultsPage.css';
  *
  * @param {object} results - Calculation results from the backend
  * @param {string[]} selectedFoods - Array of selected food IDs
+ * @param {object} advancedSettings - ML advanced settings
  */
-function ResultsPage({ results, selectedFoods }) {
+function ResultsPage({ results, selectedFoods, advancedSettings }) {
   const navigate = useNavigate();
+  const [predictions, setPredictions] = useState(null);
+
+  // Run ML predictions when results are available
+  useEffect(() => {
+    if (results && advancedSettings) {
+      const pred = predictRisks({
+        perishableLoadTons: advancedSettings.perishableLoadTons,
+        distanceMiles: results.distance_miles,
+        tempC: results.optimal_temp,
+        humidityPct: advancedSettings.humidityPct,
+        delayHours: advancedSettings.delayHours,
+      });
+      setPredictions(pred);
+    }
+  }, [results, advancedSettings]);
 
   // If no results, redirect back
   if (!results) {
@@ -109,6 +128,9 @@ function ResultsPage({ results, selectedFoods }) {
           delay={450}
         />
       </div>
+
+      {/* AI Risk Assessment Panel */}
+      <RiskPanel predictions={predictions} />
 
       {/* Selected Foods Summary */}
       <div className="foods-summary glass">

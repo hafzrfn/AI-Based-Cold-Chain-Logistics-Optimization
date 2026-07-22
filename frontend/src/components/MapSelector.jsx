@@ -5,7 +5,6 @@ import 'leaflet/dist/leaflet.css';
 import './MapSelector.css';
 
 // Fix default marker icons in Leaflet + Vite
-// (Leaflet's default marker images don't load properly with bundlers)
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
@@ -13,8 +12,8 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
 });
 
-// Custom marker icons for origin (green) and destination (red)
-const createIcon = (color) =>
+// Custom marker icons for origin (green), intermediate (orange), and destination (red)
+const createIcon = (color, text = '') =>
   new L.DivIcon({
     className: 'custom-marker',
     html: `<div style="
@@ -25,20 +24,26 @@ const createIcon = (color) =>
       transform: rotate(-45deg);
       border: 3px solid white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    "></div>`,
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+    "><span style="transform: rotate(45deg);">${text}</span></div>`,
     iconSize: [24, 24],
     iconAnchor: [12, 24],
     popupAnchor: [0, -24],
   });
 
-const originIcon = createIcon('#10b981');
-const destIcon = createIcon('#ef4444');
+const originIcon = createIcon('#10b981', 'O');
+const waypointIcon = (index) => createIcon('#f59e0b', String(index));
+const destIcon = createIcon('#ef4444', 'D');
 
 /**
  * Internal component that listens for map click events.
- * First click sets origin, second sets destination.
  */
-function MapClickHandler({ origin, destination, onSetOrigin, onSetDestination }) {
+function MapClickHandler({ waypoints, onSetWaypoints }) {
   useMapEvents({
     click: async (e) => {
       const { lat, lng } = e.latlng;
@@ -59,20 +64,11 @@ function MapClickHandler({ origin, destination, onSetOrigin, onSetDestination })
             name;
         }
       } catch {
-        // Fallback to coordinates if reverse geocoding fails
+        // Fallback to coordinates
       }
 
       const location = { lat, lng, name };
-
-      if (!origin) {
-        onSetOrigin(location);
-      } else if (!destination) {
-        onSetDestination(location);
-      } else {
-        // Reset: start a new selection
-        onSetOrigin(location);
-        onSetDestination(null);
-      }
+      onSetWaypoints([...waypoints, location]);
     },
   });
 
@@ -80,65 +76,139 @@ function MapClickHandler({ origin, destination, onSetOrigin, onSetDestination })
 }
 
 /**
- * Interactive world map for selecting origin and destination.
- * Users click on the map to place markers.
- *
- * @param {object|null} origin - Origin location { lat, lng, name }
- * @param {object|null} destination - Destination location { lat, lng, name }
- * @param {function} onSetOrigin - Callback when origin is set
- * @param {function} onSetDestination - Callback when destination is set
+ * Interactive world map for selecting multiple waypoints (Milk Run).
  */
-function MapSelector({ origin, destination, onSetOrigin, onSetDestination }) {
+function MapSelector({ waypoints, onSetWaypoints, onSetDistance }) {
   const [distance, setDistance] = useState(null);
+  const [polylinePositions, setPolylinePositions] = useState([]);
+  const [optimizedOrder, setOptimizedOrder] = useState([]);
 
-  // Calculate distance when both markers are placed
+  // Calculate driving distance and optimized trip route when there are 2 or more waypoints
   useEffect(() => {
-    if (origin && destination) {
-      const from = L.latLng(origin.lat, origin.lng);
-      const to = L.latLng(destination.lat, destination.lng);
-      const dist = from.distanceTo(to) / 1000; // Convert to km
-      setDistance(dist.toFixed(0));
+    let active = true;
+    
+    if (waypoints.length >= 2) {
+      // Build coordinates string: lng,lat;lng,lat...
+      const coordsString = waypoints.map(wp => `${wp.lng},${wp.lat}`).join(';');
+      
+      // Use OSRM Trip API (TSP solver)
+      const url = `https://router.project-osrm.org/trip/v1/driving/${coordsString}?source=first&roundtrip=false&geometries=geojson`;
+      
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          if (!active) return;
+          if (data.trips && data.trips.length > 0) {
+            const trip = data.trips[0];
+            const distKm = trip.distance / 1000;
+            
+            setDistance(distKm.toFixed(0));
+            if (onSetDistance) onSetDistance(distKm);
+
+            // GeoJSON coordinates are [lng, lat], Leaflet wants [lat, lng]
+            const coords = trip.geometry.coordinates.map((c) => [c[1], c[0]]);
+            setPolylinePositions(coords);
+            
+            // Reorder waypoints based on OSRM optimization
+            if (data.waypoints) {
+              const sortedIndices = data.waypoints
+                .map((wp, i) => ({ ...wp, original_index: i }))
+                .sort((a, b) => a.waypoint_index - b.waypoint_index)
+                .map(wp => wp.original_index);
+              setOptimizedOrder(sortedIndices);
+            }
+          }
+        })
+        .catch((err) => {
+          console.error("OSRM Routing Error:", err);
+          if (!active) return;
+          // Fallback to straight line logic if API fails
+          let totalDist = 0;
+          for (let i = 0; i < waypoints.length - 1; i++) {
+             const from = L.latLng(waypoints[i].lat, waypoints[i].lng);
+             const to = L.latLng(waypoints[i+1].lat, waypoints[i+1].lng);
+             totalDist += from.distanceTo(to) / 1000;
+          }
+          
+          setDistance(totalDist.toFixed(0));
+          if (onSetDistance) onSetDistance(totalDist);
+          
+          setPolylinePositions(waypoints.map(wp => [wp.lat, wp.lng]));
+          setOptimizedOrder(waypoints.map((_, i) => i));
+        });
     } else {
       setDistance(null);
+      setPolylinePositions([]);
+      setOptimizedOrder([]);
+      if (onSetDistance) onSetDistance(null);
     }
-  }, [origin, destination]);
-
-  // Line between origin and destination
-  const polylinePositions =
-    origin && destination
-      ? [
-          [origin.lat, origin.lng],
-          [destination.lat, destination.lng],
-        ]
-      : [];
+    
+    return () => { active = false; };
+  }, [waypoints, onSetDistance]);
 
   return (
     <div className="map-selector" id="map-selector">
       {/* Instruction bar */}
       <div className="map-instructions glass">
-        {!origin && <p>📍 Click on the map to set your <strong>origin</strong></p>}
-        {origin && !destination && (
-          <p>📍 Click on the map to set your <strong>destination</strong></p>
-        )}
-        {origin && destination && (
-          <p>
-            ✅ Route set! <strong>{origin.name}</strong> → <strong>{destination.name}</strong>
-            {distance && <span className="distance-badge">{Number(distance).toLocaleString()} km</span>}
-          </p>
+        {waypoints.length === 0 && <p>📍 Click on the map to set your <strong>origin</strong></p>}
+        {waypoints.length === 1 && <p>📍 Click on the map to add a <strong>destination</strong></p>}
+        {waypoints.length >= 2 && (
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+            <p style={{ margin: 0 }}>
+              ✅ Trip optimized! <strong>{waypoints.length} stops</strong>
+              {distance && <span className="distance-badge">{Number(distance).toLocaleString()} km</span>}
+            </p>
+            <button 
+              onClick={() => onSetWaypoints([])}
+              style={{
+                background: 'rgba(255, 255, 255, 0.2)',
+                border: 'none',
+                padding: '4px 8px',
+                borderRadius: '4px',
+                color: 'white',
+                cursor: 'pointer'
+              }}
+            >
+              Clear
+            </button>
+          </div>
         )}
       </div>
 
       {/* Location indicators */}
-      <div className="map-locations">
-        <div className={`location-pill ${origin ? 'active' : ''}`}>
-          <span className="location-dot origin-dot"></span>
-          <span>{origin ? origin.name : 'Origin'}</span>
-        </div>
-        <span className="location-arrow">→</span>
-        <div className={`location-pill ${destination ? 'active' : ''}`}>
-          <span className="location-dot dest-dot"></span>
-          <span>{destination ? destination.name : 'Destination'}</span>
-        </div>
+      <div className="map-locations" style={{ flexWrap: 'wrap', gap: '8px', padding: '12px' }}>
+        {optimizedOrder.length > 0 ? (
+          optimizedOrder.map((originalIndex, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="location-pill active" style={{ 
+                background: i === 0 ? 'rgba(16, 185, 129, 0.2)' : 
+                           i === optimizedOrder.length - 1 ? 'rgba(239, 68, 68, 0.2)' : 
+                           'rgba(245, 158, 11, 0.2)',
+                borderColor: i === 0 ? 'rgba(16, 185, 129, 0.5)' : 
+                            i === optimizedOrder.length - 1 ? 'rgba(239, 68, 68, 0.5)' : 
+                            'rgba(245, 158, 11, 0.5)',
+                margin: 0
+              }}>
+                <span className="location-dot" style={{ 
+                  background: i === 0 ? '#10b981' : 
+                             i === optimizedOrder.length - 1 ? '#ef4444' : 
+                             '#f59e0b' 
+                }}></span>
+                <span>{waypoints[originalIndex].name}</span>
+              </div>
+              {i < optimizedOrder.length - 1 && <span className="location-arrow" style={{ margin: '0 4px' }}>→</span>}
+            </div>
+          ))
+        ) : (
+          waypoints.map((wp, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="location-pill active" style={{ margin: 0 }}>
+                <span className="location-dot origin-dot"></span>
+                <span>{wp.name}</span>
+              </div>
+            </div>
+          ))
+        )}
       </div>
 
       {/* Leaflet Map */}
@@ -155,27 +225,28 @@ function MapSelector({ origin, destination, onSetOrigin, onSetDestination }) {
         />
 
         <MapClickHandler
-          origin={origin}
-          destination={destination}
-          onSetOrigin={onSetOrigin}
-          onSetDestination={onSetDestination}
+          waypoints={waypoints}
+          onSetWaypoints={onSetWaypoints}
         />
 
-        {origin && (
-          <Marker position={[origin.lat, origin.lng]} icon={originIcon}>
-            <Popup>
-              <strong>Origin:</strong> {origin.name}
-            </Popup>
-          </Marker>
-        )}
-
-        {destination && (
-          <Marker position={[destination.lat, destination.lng]} icon={destIcon}>
-            <Popup>
-              <strong>Destination:</strong> {destination.name}
-            </Popup>
-          </Marker>
-        )}
+        {waypoints.map((wp, i) => {
+           let icon = waypointIcon(i);
+           if (i === 0) icon = originIcon;
+           // If we have an optimized order, make the last one the destination icon
+           if (optimizedOrder.length > 0 && i === optimizedOrder[optimizedOrder.length - 1]) {
+             icon = destIcon;
+           } else if (optimizedOrder.length === 0 && i > 0) {
+             icon = waypointIcon(i);
+           }
+           
+           return (
+             <Marker key={i} position={[wp.lat, wp.lng]} icon={icon}>
+               <Popup>
+                 <strong>{i === 0 ? 'Origin' : 'Stop ' + i}:</strong> {wp.name}
+               </Popup>
+             </Marker>
+           );
+        })}
 
         {polylinePositions.length > 0 && (
           <Polyline

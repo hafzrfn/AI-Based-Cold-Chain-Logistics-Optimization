@@ -5,8 +5,10 @@ import axios from 'axios';
  * All API calls are centralized here for maintainability.
  */
 
-// Base URL for the backend API
-const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app';
+// Conditionally use local backend if running locally
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:5000' 
+  : 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app';
 
 // Create a reusable axios instance with default config
 const apiClient = axios.create({
@@ -20,23 +22,19 @@ const apiClient = axios.create({
 /**
  * Calculate logistics for selected foods and route.
  * @param {string[]} selectedFoodIds - Array of food IDs
- * @param {{ lat: number, lng: number, name: string }} origin - Origin location
- * @param {{ lat: number, lng: number, name: string }} destination - Destination location
+ * @param {Array<{ lat: number, lng: number, name: string }>} waypoints - Array of locations
+ * @param {number|null} drivingDistanceKm - Actual driving distance from OSRM
  * @returns {Promise<object>} Logistics calculation results
  */
-export const calculateLogistics = async (selectedFoodIds, origin, destination) => {
+export const calculateLogistics = async (selectedFoodIds, waypoints, drivingDistanceKm = null) => {
   const response = await apiClient.post('/api/calculate', {
     foods: selectedFoodIds,
-    origin: {
-      lat: origin.lat,
-      lng: origin.lng,
-      name: origin.name || 'Unknown',
-    },
-    destination: {
-      lat: destination.lat,
-      lng: destination.lng,
-      name: destination.name || 'Unknown',
-    },
+    waypoints: waypoints.map(wp => ({
+      lat: wp.lat,
+      lng: wp.lng,
+      name: wp.name || 'Unknown',
+    })),
+    drivingDistanceKm,
   });
   return response.data;
 };

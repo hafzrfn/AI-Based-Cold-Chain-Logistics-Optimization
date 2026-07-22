@@ -191,23 +191,28 @@ def calculate_emissions(distance, transport_mode, time_hours, optimal_temp):
     return round(total_co2, 2)
 
 
-def calculate_logistics(foods, origin, destination):
+def calculate_logistics(foods, waypoints, driving_distance_km=None):
     """
     Main calculation function — the heart of the application.
     
     Args:
         foods: list of food dicts with 'optimal_temp' and 'id' keys
-        origin: dict with 'lat', 'lng', 'name'
-        destination: dict with 'lat', 'lng', 'name'
+        waypoints: list of dicts with 'lat', 'lng', 'name'
+        driving_distance_km: float or None
     
     Returns:
         dict with all logistics calculation results
     """
-    # Step 1: Calculate distance using Haversine formula
-    distance = haversine_distance(
-        origin['lat'], origin['lng'],
-        destination['lat'], destination['lng']
-    )
+    # Step 1: Use actual driving distance, fallback to Haversine formula across waypoints
+    if driving_distance_km is not None:
+        distance = float(driving_distance_km)
+    else:
+        distance = 0
+        for i in range(len(waypoints) - 1):
+            distance += haversine_distance(
+                waypoints[i]['lat'], waypoints[i]['lng'],
+                waypoints[i+1]['lat'], waypoints[i+1]['lng']
+            )
 
     # Step 2: Auto-recommend the best transport mode
     transport_mode = recommend_transport(distance)
@@ -226,12 +231,15 @@ def calculate_logistics(foods, origin, destination):
 
     return {
         'distance': round(distance, 1),
+        'distance_miles': round(distance / 1.60934, 1),
         'transport_mode': transport_mode,
         'transport_label': TRANSPORT_MODES[transport_mode]['label'],
         'time_hours': time_hours,
         'optimal_temp': optimal_temp,
+        'temp_deviation_abs': round(abs(optimal_temp - 4.0), 2),
         'cost_usd': cost_usd,
         'co2_kg': co2_kg,
-        'origin_name': origin.get('name', 'Unknown'),
-        'destination_name': destination.get('name', 'Unknown'),
+        'origin_name': waypoints[0].get('name', 'Unknown'),
+        'destination_name': waypoints[-1].get('name', 'Unknown') if len(waypoints) > 1 else 'Unknown',
+        'stop_count': len(waypoints),
     }

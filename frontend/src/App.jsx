@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import FoodSelectionPage from './pages/FoodSelectionPage';
 import RouteSelectionPage from './pages/RouteSelectionPage';
 import ResultsPage from './pages/ResultsPage';
+import DashboardPage from './pages/DashboardPage';
+import OperationsPage from './pages/OperationsPage';
 import './App.css';
 
 /**
@@ -15,6 +17,27 @@ function App() {
   // Global state shared across pages
   const [selectedFoods, setSelectedFoods] = useState([]);
   const [results, setResults] = useState(null);
+
+  // Theme state with localStorage persistence
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
+  // Advanced settings for ML predictions
+  const [advancedSettings, setAdvancedSettings] = useState({
+    perishableLoadTons: 5.0,
+    humidityPct: 75,
+    delayHours: 2.5,
+  });
 
   /**
    * Toggle a food item's selection state.
@@ -37,7 +60,7 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar />
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="app-main">
         <Routes>
           <Route
@@ -55,6 +78,8 @@ function App() {
               <RouteSelectionPage
                 selectedFoods={selectedFoods}
                 onResults={handleResults}
+                advancedSettings={advancedSettings}
+                setAdvancedSettings={setAdvancedSettings}
               />
             }
           />
@@ -64,8 +89,17 @@ function App() {
               <ResultsPage
                 results={results}
                 selectedFoods={selectedFoods}
+                advancedSettings={advancedSettings}
               />
             }
+          />
+          <Route
+            path="/dashboard"
+            element={<DashboardPage />}
+          />
+          <Route
+            path="/operations"
+            element={<OperationsPage />}
           />
         </Routes>
       </main>

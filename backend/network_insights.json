@@ -1,0 +1,4168 @@
+{
+  "top_routes": [
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Los Angeles, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "ColdChainFlow": 6320615113,
+      "total_cost": 8343211949.16,
+      "priority_score": 0.993993988918733,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Maricopa, AZ",
+      "dest_county": "Maricopa, AZ",
+      "origin_coords": {
+        "lat": 48.4,
+        "lng": -98.48
+      },
+      "dest_coords": {
+        "lat": 48.4,
+        "lng": -98.48
+      },
+      "ColdChainFlow": 4272041210,
+      "total_cost": 5639094397.2,
+      "priority_score": 0.7391636554914944,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Harris, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "ColdChainFlow": 2296625229,
+      "total_cost": 3031545302.2799997,
+      "priority_score": 0.522516027468164,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "San Bernardino, CA",
+      "dest_county": "San Bernardino, CA",
+      "origin_coords": {
+        "lat": 40.89,
+        "lng": -78.34
+      },
+      "dest_coords": {
+        "lat": 40.89,
+        "lng": -78.34
+      },
+      "ColdChainFlow": 3432953588,
+      "total_cost": 4531498736.16,
+      "priority_score": 0.5100938769330821,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "San Bernardino, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 40.89,
+        "lng": -78.34
+      },
+      "ColdChainFlow": 1695130243,
+      "total_cost": 2237571920.7599998,
+      "priority_score": 0.4451370200194784,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "San Diego, CA",
+      "dest_county": "San Diego, CA",
+      "origin_coords": {
+        "lat": 37.72,
+        "lng": -92.75999999999999
+      },
+      "dest_coords": {
+        "lat": 37.72,
+        "lng": -92.75999999999999
+      },
+      "ColdChainFlow": 1992559338,
+      "total_cost": 2630178326.16,
+      "priority_score": 0.4069937568934963,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Riverside, CA",
+      "dest_county": "Riverside, CA",
+      "origin_coords": {
+        "lat": 25.45,
+        "lng": -116.91
+      },
+      "dest_coords": {
+        "lat": 25.45,
+        "lng": -116.91
+      },
+      "ColdChainFlow": 2454077160,
+      "total_cost": 3239381851.2,
+      "priority_score": 0.4062609957926822,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Ada, ID",
+      "dest_county": "Ada, ID",
+      "origin_coords": {
+        "lat": 44.94,
+        "lng": -97.19
+      },
+      "dest_coords": {
+        "lat": 44.94,
+        "lng": -97.19
+      },
+      "ColdChainFlow": 2779715819,
+      "total_cost": 3669224881.08,
+      "priority_score": 0.37449188002322026,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Cook, IL",
+      "dest_county": "Cook, IL",
+      "origin_coords": {
+        "lat": 29.66,
+        "lng": -94.87
+      },
+      "dest_coords": {
+        "lat": 29.66,
+        "lng": -94.87
+      },
+      "ColdChainFlow": 1629529365,
+      "total_cost": 2150978761.8,
+      "priority_score": 0.3729468775470387,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Riverside, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 25.45,
+        "lng": -116.91
+      },
+      "ColdChainFlow": 938923502,
+      "total_cost": 1239379022.6399999,
+      "priority_score": 0.3554060293468306,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Washington, NE",
+      "dest_county": "Sarpy, NE",
+      "origin_coords": {
+        "lat": 35.88,
+        "lng": -106.4
+      },
+      "dest_coords": {
+        "lat": 40.99,
+        "lng": -73.18
+      },
+      "ColdChainFlow": 2883835715,
+      "total_cost": 3806663143.8,
+      "priority_score": 0.3431579567726994,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Walker, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 32.55,
+        "lng": -116.14
+      },
+      "ColdChainFlow": 532629944,
+      "total_cost": 703071526.0799999,
+      "priority_score": 0.31320151612750163,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Orange, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 25.84,
+        "lng": -107.37
+      },
+      "ColdChainFlow": 566939995,
+      "total_cost": 748360793.4,
+      "priority_score": 0.3112667129571664,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Fort Bend, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 48.03,
+        "lng": -123.88
+      },
+      "ColdChainFlow": 316574193,
+      "total_cost": 417877934.76,
+      "priority_score": 0.2875644839157603,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Northampton, PA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 47.45,
+        "lng": -68.18
+      },
+      "ColdChainFlow": 309145592,
+      "total_cost": 408072181.44,
+      "priority_score": 0.28067699996351586,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Orleans, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 41.06,
+        "lng": -78.36
+      },
+      "ColdChainFlow": 232644807,
+      "total_cost": 307091145.23999995,
+      "priority_score": 0.2776054786014622,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Maricopa, AZ",
+      "dest_county": "Pima, AZ",
+      "origin_coords": {
+        "lat": 48.4,
+        "lng": -98.48
+      },
+      "dest_coords": {
+        "lat": 33.9,
+        "lng": -100.88
+      },
+      "ColdChainFlow": 363332334,
+      "total_cost": 479598680.87999994,
+      "priority_score": 0.27535885096059726,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "San Joaquin, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 32.18,
+        "lng": -67.52000000000001
+      },
+      "ColdChainFlow": 223402180,
+      "total_cost": 294890877.6,
+      "priority_score": 0.2705027435263956,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Plaquemines, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 33.94,
+        "lng": -79.72999999999999
+      },
+      "ColdChainFlow": 171732779,
+      "total_cost": 226687268.28,
+      "priority_score": 0.2703776977315214,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Pierce, WA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 36.66,
+        "lng": -96.75
+      },
+      "ColdChainFlow": 208029433,
+      "total_cost": 274598851.55999994,
+      "priority_score": 0.2686786235564442,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Milam, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 38.31,
+        "lng": -110.3
+      },
+      "ColdChainFlow": 149317776,
+      "total_cost": 197099464.32,
+      "priority_score": 0.26771794833222273,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Lake, IL",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 48.4,
+        "lng": -109.9
+      },
+      "ColdChainFlow": 192222561,
+      "total_cost": 253733780.51999998,
+      "priority_score": 0.2668029906017311,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Trinity, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 31.32,
+        "lng": -115.08
+      },
+      "ColdChainFlow": 129460925,
+      "total_cost": 170888421.0,
+      "priority_score": 0.2653617475536989,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Bandera, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 34.15,
+        "lng": -107.72
+      },
+      "ColdChainFlow": 110648228,
+      "total_cost": 146055660.95999998,
+      "priority_score": 0.263129445396749,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Park, WY",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 28.43,
+        "lng": -122.93
+      },
+      "ColdChainFlow": 149752835,
+      "total_cost": 197673742.2,
+      "priority_score": 0.2617635610635384,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Montgomery, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 31.42,
+        "lng": -91.86
+      },
+      "ColdChainFlow": 86742104,
+      "total_cost": 114499577.27999999,
+      "priority_score": 0.26029276056790646,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Sacramento, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 40.8,
+        "lng": -89.61
+      },
+      "ColdChainFlow": 134598883,
+      "total_cost": 177670525.56,
+      "priority_score": 0.25996540316326944,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Lavaca, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 35.64,
+        "lng": -123.61
+      },
+      "ColdChainFlow": 81560648,
+      "total_cost": 107660055.36,
+      "priority_score": 0.2596779324332195,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Maricopa, AZ",
+      "dest_county": "Fresno, CA",
+      "origin_coords": {
+        "lat": 48.4,
+        "lng": -98.48
+      },
+      "dest_coords": {
+        "lat": 29.14,
+        "lng": -85.95
+      },
+      "ColdChainFlow": 231084492,
+      "total_cost": 305031529.44,
+      "priority_score": 0.2596664096828491,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Kitsap, WA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 44.44,
+        "lng": -110.05
+      },
+      "ColdChainFlow": 128710981,
+      "total_cost": 169898494.92,
+      "priority_score": 0.2592667486144554,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Jefferson, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 46.379999999999995,
+        "lng": -78.7
+      },
+      "ColdChainFlow": 77575239,
+      "total_cost": 102399315.47999999,
+      "priority_score": 0.2592050264428117,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Polk, OR",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 39.01,
+        "lng": -93.28
+      },
+      "ColdChainFlow": 119786116,
+      "total_cost": 158117673.11999997,
+      "priority_score": 0.25820773004896286,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Santa Clara, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 33.69,
+        "lng": -93.89
+      },
+      "ColdChainFlow": 115276686,
+      "total_cost": 152165225.51999998,
+      "priority_score": 0.2576726440740165,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Comal, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 37.39,
+        "lng": -122.46
+      },
+      "ColdChainFlow": 61290989,
+      "total_cost": 80904105.47999999,
+      "priority_score": 0.25727274813102513,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Alameda, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 36.05,
+        "lng": -98.07
+      },
+      "ColdChainFlow": 110620219,
+      "total_cost": 146018689.07999998,
+      "priority_score": 0.25712011078610647,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Bexar, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 34.35,
+        "lng": -117.43
+      },
+      "ColdChainFlow": 44100808,
+      "total_cost": 58213066.559999995,
+      "priority_score": 0.2552329726472304,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Montgomery, KS",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 28.06,
+        "lng": -95.2
+      },
+      "ColdChainFlow": 34912430,
+      "total_cost": 46084407.6,
+      "priority_score": 0.25414268580381444,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Galveston, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 37.58,
+        "lng": -107.32
+      },
+      "ColdChainFlow": 34704426,
+      "total_cost": 45809842.31999999,
+      "priority_score": 0.2541180041870396,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Clark, NV",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 28.98,
+        "lng": -68.9
+      },
+      "ColdChainFlow": 82885496,
+      "total_cost": 109408854.71999998,
+      "priority_score": 0.2538291269375223,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Maricopa, AZ",
+      "dest_county": "Pinal, AZ",
+      "origin_coords": {
+        "lat": 48.4,
+        "lng": -98.48
+      },
+      "dest_coords": {
+        "lat": 38.45,
+        "lng": -99.22
+      },
+      "ColdChainFlow": 179545976,
+      "total_cost": 237000688.32,
+      "priority_score": 0.2535508835340573,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Reynolds, MO",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 28.61,
+        "lng": -67.85
+      },
+      "ColdChainFlow": 78295946,
+      "total_cost": 103350648.72,
+      "priority_score": 0.2532845339764796,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Maricopa, AZ",
+      "dest_county": "Riverside, CA",
+      "origin_coords": {
+        "lat": 48.4,
+        "lng": -98.48
+      },
+      "dest_coords": {
+        "lat": 25.45,
+        "lng": -116.91
+      },
+      "ColdChainFlow": 176472949,
+      "total_cost": 232944292.68,
+      "priority_score": 0.253186240187042,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Placer, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 35.1,
+        "lng": -84.08
+      },
+      "ColdChainFlow": 77245740,
+      "total_cost": 101964376.8,
+      "priority_score": 0.25315991722859693,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Matagorda, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 30.87,
+        "lng": -116.58
+      },
+      "ColdChainFlow": 26612158,
+      "total_cost": 35128048.56,
+      "priority_score": 0.25315778102972114,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Hays, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 25.3,
+        "lng": -82.69
+      },
+      "ColdChainFlow": 24002067,
+      "total_cost": 31682728.439999998,
+      "priority_score": 0.25284806936163146,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Lafayette, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 33.42,
+        "lng": -86.42
+      },
+      "ColdChainFlow": 20631002,
+      "total_cost": 27232922.639999997,
+      "priority_score": 0.25244806102307593,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Ventura, CA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 42.45,
+        "lng": -78.97
+      },
+      "ColdChainFlow": 70667898,
+      "total_cost": 93281625.36,
+      "priority_score": 0.2523793948566757,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Dane, WI",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 45.66,
+        "lng": -86.35
+      },
+      "ColdChainFlow": 69848332,
+      "total_cost": 92199798.24,
+      "priority_score": 0.2522821456983247,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Lancaster, PA",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 37.04,
+        "lng": -93.98
+      },
+      "ColdChainFlow": 65879188,
+      "total_cost": 86960528.16,
+      "priority_score": 0.2518111697020364,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Brazos, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 44.760000000000005,
+        "lng": -84.02000000000001
+      },
+      "ColdChainFlow": 14766039,
+      "total_cost": 19491171.48,
+      "priority_score": 0.25175212840079797,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Pope, AR",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 31.41,
+        "lng": -99.23
+      },
+      "ColdChainFlow": 9963359,
+      "total_cost": 13151633.88,
+      "priority_score": 0.25118224557521796,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Grimes, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 42.53,
+        "lng": -80.82
+      },
+      "ColdChainFlow": 9769706,
+      "total_cost": 12896011.92,
+      "priority_score": 0.2511592668385913,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Victoria, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 46.28,
+        "lng": -123.68
+      },
+      "ColdChainFlow": 9594831,
+      "total_cost": 12665176.92,
+      "priority_score": 0.2511385162869986,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Angelina, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 29.85,
+        "lng": -83.58
+      },
+      "ColdChainFlow": 8532664,
+      "total_cost": 11263116.479999999,
+      "priority_score": 0.25101248025478373,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Kaufman, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 40.13,
+        "lng": -90.35
+      },
+      "ColdChainFlow": 8054882,
+      "total_cost": 10632444.24,
+      "priority_score": 0.250955786959338,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Jefferson, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 35.1,
+        "lng": -88.74000000000001
+      },
+      "ColdChainFlow": 7992842,
+      "total_cost": 10550551.44,
+      "priority_score": 0.25094842533405814,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Henderson, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 39.47,
+        "lng": -101.59
+      },
+      "ColdChainFlow": 7809207,
+      "total_cost": 10308153.24,
+      "priority_score": 0.2509266353266716,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Chambers, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 41.81,
+        "lng": -65.19
+      },
+      "ColdChainFlow": 6878449,
+      "total_cost": 9079552.68,
+      "priority_score": 0.2508161921992987,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Gonzales, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 40.269999999999996,
+        "lng": -124.79
+      },
+      "ColdChainFlow": 6429825,
+      "total_cost": 8487369.0,
+      "priority_score": 0.250762958772807,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Liberty, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 48.019999999999996,
+        "lng": -111.53999999999999
+      },
+      "ColdChainFlow": 6290468,
+      "total_cost": 8303417.76,
+      "priority_score": 0.25074642276355297,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Dane, WI",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 45.66,
+        "lng": -86.35
+      },
+      "ColdChainFlow": 6001024,
+      "total_cost": 7921351.679999999,
+      "priority_score": 0.2507120775303567,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Navarro, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 40.84,
+        "lng": -97.16
+      },
+      "ColdChainFlow": 5412113,
+      "total_cost": 7143989.159999999,
+      "priority_score": 0.2506421977414273,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Carter, OK",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 45.379999999999995,
+        "lng": -88.14
+      },
+      "ColdChainFlow": 4284788,
+      "total_cost": 5655920.159999999,
+      "priority_score": 0.2505084301041192,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Brazoria, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 47.239999999999995,
+        "lng": -89.91
+      },
+      "ColdChainFlow": 2675127,
+      "total_cost": 3531167.6399999997,
+      "priority_score": 0.25031742879674374,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Los Angeles, CA",
+      "dest_county": "Tarrant, TX",
+      "origin_coords": {
+        "lat": 28.22,
+        "lng": -97.14
+      },
+      "dest_coords": {
+        "lat": 39.17,
+        "lng": -67.22999999999999
+      },
+      "ColdChainFlow": 52316978,
+      "total_cost": 69058410.96,
+      "priority_score": 0.2502018868524796,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Putnam, FL",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 43.47,
+        "lng": -119.06
+      },
+      "ColdChainFlow": 1399341,
+      "total_cost": 1847130.1199999996,
+      "priority_score": 0.2501660448755757,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Newton, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 39.58,
+        "lng": -115.01
+      },
+      "ColdChainFlow": 1342736,
+      "total_cost": 1772411.5199999998,
+      "priority_score": 0.25015932816379355,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Rapides, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 40.480000000000004,
+        "lng": -94.82
+      },
+      "ColdChainFlow": 1238205,
+      "total_cost": 1634430.6,
+      "priority_score": 0.2501469245846168,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "San Jacinto, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 40.88,
+        "lng": -98.3
+      },
+      "ColdChainFlow": 1087564,
+      "total_cost": 1435584.48,
+      "priority_score": 0.25012904962340177,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Polk, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 48.55,
+        "lng": -122.82
+      },
+      "ColdChainFlow": 1017263,
+      "total_cost": 1342787.16,
+      "priority_score": 0.2501207077533373,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Hillsborough, FL",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 27.66,
+        "lng": -95.33
+      },
+      "ColdChainFlow": 993345,
+      "total_cost": 1311215.4,
+      "priority_score": 0.25011786965931015,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Santa Clara, CA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 33.69,
+        "lng": -93.89
+      },
+      "ColdChainFlow": 934757,
+      "total_cost": 1233879.24,
+      "priority_score": 0.25011091764606236,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Pinal, AZ",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 38.45,
+        "lng": -99.22
+      },
+      "ColdChainFlow": 909568,
+      "total_cost": 1200629.7599999998,
+      "priority_score": 0.2501079287360176,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Mercer, NJ",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 37.67,
+        "lng": -90.87
+      },
+      "ColdChainFlow": 881903,
+      "total_cost": 1164111.96,
+      "priority_score": 0.250104646025454,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Taney, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 28.66,
+        "lng": -114.47
+      },
+      "ColdChainFlow": 707686,
+      "total_cost": 934145.5199999999,
+      "priority_score": 0.2500839735517052,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Elbert, CO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 48.29,
+        "lng": -114.43
+      },
+      "ColdChainFlow": 508257,
+      "total_cost": 670899.24,
+      "priority_score": 0.25006030943874685,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Natchitoches, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 33.94,
+        "lng": -68.08
+      },
+      "ColdChainFlow": 494168,
+      "total_cost": 652301.76,
+      "priority_score": 0.2500586376473451,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Polk, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 35.31,
+        "lng": -77.59
+      },
+      "ColdChainFlow": 456626,
+      "total_cost": 602746.32,
+      "priority_score": 0.25005418293850795,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "McClain, OK",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 48.29,
+        "lng": -99.59
+      },
+      "ColdChainFlow": 424235,
+      "total_cost": 559990.2,
+      "priority_score": 0.2500503394439167,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Muskogee, OK",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 30.11,
+        "lng": -103.21000000000001
+      },
+      "ColdChainFlow": 371957,
+      "total_cost": 490983.24,
+      "priority_score": 0.2500441361710866,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Washington, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 44.3,
+        "lng": -75.8
+      },
+      "ColdChainFlow": 298607,
+      "total_cost": 394161.24,
+      "priority_score": 0.250035432508703,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Miller, AR",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 48.43,
+        "lng": -80.17
+      },
+      "ColdChainFlow": 293120,
+      "total_cost": 386918.4,
+      "priority_score": 0.25003478142491986,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Calhoun, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 28.39,
+        "lng": -67.82
+      },
+      "ColdChainFlow": 237612,
+      "total_cost": 313647.83999999997,
+      "priority_score": 0.2500281948824306,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Buchanan, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 39.25,
+        "lng": -91.44
+      },
+      "ColdChainFlow": 142751,
+      "total_cost": 188431.31999999998,
+      "priority_score": 0.2500169387390445,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Orange, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 38.86,
+        "lng": -101.71000000000001
+      },
+      "ColdChainFlow": 134932,
+      "total_cost": 178110.24,
+      "priority_score": 0.25001601094168696,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Gaston, NC",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 25.17,
+        "lng": -124.67
+      },
+      "ColdChainFlow": 125031,
+      "total_cost": 165040.91999999998,
+      "priority_score": 0.25001483609558933,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Surry, NC",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 46.57,
+        "lng": -116.76
+      },
+      "ColdChainFlow": 124948,
+      "total_cost": 164931.36000000002,
+      "priority_score": 0.2500148262468644,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "St. Tammany, LA",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 31.29,
+        "lng": -100.76
+      },
+      "ColdChainFlow": 105772,
+      "total_cost": 139619.03999999998,
+      "priority_score": 0.25001255083541424,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Jasper, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 39.83,
+        "lng": -98.97
+      },
+      "ColdChainFlow": 105600,
+      "total_cost": 139392.0,
+      "priority_score": 0.25001253042600824,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Cherokee, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 33.82,
+        "lng": -84.02000000000001
+      },
+      "ColdChainFlow": 104308,
+      "total_cost": 137686.56,
+      "priority_score": 0.25001237711814456,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Christian, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 41.82,
+        "lng": -77.02000000000001
+      },
+      "ColdChainFlow": 74088,
+      "total_cost": 97796.15999999999,
+      "priority_score": 0.2500087912329744,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Jackson, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 44.91,
+        "lng": -106.81
+      },
+      "ColdChainFlow": 71414,
+      "total_cost": 94266.48000000001,
+      "priority_score": 0.25000847393790676,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Camden, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 42.58,
+        "lng": -112.94
+      },
+      "ColdChainFlow": 66274,
+      "total_cost": 87481.68000000001,
+      "priority_score": 0.25000786402891356,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Jasper, MO",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 29.21,
+        "lng": -94.25
+      },
+      "ColdChainFlow": 55943,
+      "total_cost": 73844.76,
+      "priority_score": 0.2500066381593009,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Hardin, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 33.769999999999996,
+        "lng": -95.22
+      },
+      "ColdChainFlow": 46507,
+      "total_cost": 61389.23999999999,
+      "priority_score": 0.25000551848979513,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Hartford, CT",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 41.68,
+        "lng": -121.69
+      },
+      "ColdChainFlow": 40477,
+      "total_cost": 53429.63999999999,
+      "priority_score": 0.2500048029739918,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "DuPage, IL",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 47.15,
+        "lng": -88.47999999999999
+      },
+      "ColdChainFlow": 39360,
+      "total_cost": 51955.2,
+      "priority_score": 0.25000467043151214,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Benton, AR",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 32.89,
+        "lng": -108.19
+      },
+      "ColdChainFlow": 34852,
+      "total_cost": 46004.64,
+      "priority_score": 0.25000413551522005,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Adams, MS",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 30.9,
+        "lng": -124.51
+      },
+      "ColdChainFlow": 31925,
+      "total_cost": 42141.0,
+      "priority_score": 0.2500037881993401,
+      "priority_tier": "High"
+    },
+    {
+      "origin_county": "Harris, TX",
+      "dest_county": "Robertson, TX",
+      "origin_coords": {
+        "lat": 42.96,
+        "lng": -96.27
+      },
+      "dest_coords": {
+        "lat": 38.94,
+        "lng": -94.56
+      },
+      "ColdChainFlow": 21356,
+      "total_cost": 28189.92,
+      "priority_score": 0.25000253408880524,
+      "priority_tier": "High"
+    }
+  ],
+  "top_hubs": [
+    {
+      "county": "Harris, TX",
+      "pagerank": 0.012496740490607679
+    },
+    {
+      "county": "Los Angeles, CA",
+      "pagerank": 0.012196518243142452
+    },
+    {
+      "county": "Maricopa, AZ",
+      "pagerank": 0.011609275818177875
+    },
+    {
+      "county": "Cook, IL",
+      "pagerank": 0.008977058682340984
+    },
+    {
+      "county": "San Diego, CA",
+      "pagerank": 0.008525675584378306
+    },
+    {
+      "county": "Fairfax, VA",
+      "pagerank": 0.007579789549802083
+    },
+    {
+      "county": "Williamson, TX",
+      "pagerank": 0.007551501856855685
+    },
+    {
+      "county": "Orange, CA",
+      "pagerank": 0.007296611544375364
+    },
+    {
+      "county": "Bexar, TX",
+      "pagerank": 0.006209597174173129
+    },
+    {
+      "county": "Riverside, CA",
+      "pagerank": 0.005751591147148626
+    },
+    {
+      "county": "Dallas, TX",
+      "pagerank": 0.005426889500196992
+    },
+    {
+      "county": "San Bernardino, CA",
+      "pagerank": 0.005135754424779169
+    },
+    {
+      "county": "Palm Beach, FL",
+      "pagerank": 0.00505002658771141
+    },
+    {
+      "county": "Collin, TX",
+      "pagerank": 0.004921398934479988
+    },
+    {
+      "county": "Jefferson, KY",
+      "pagerank": 0.004391754979842689
+    }
+  ],
+  "ml_dataset_sample": [
+    {
+      "source_row_id": 2113089,
+      "row_index": 2113088,
+      "sim_ori": 29099,
+      "sim_des": 26161,
+      "name_ori": "Jefferson, MO",
+      "name_des": "Washtenaw, MI",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 53541,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 53541,
+      "perishable_load_tons": 0.685,
+      "distance_miles": 1108.7338667541892,
+      "temp_c": 4.513042926972394,
+      "humidity_pct": 63.42645047708756,
+      "delay_hours": 4.950062678986946,
+      "temp_deviation_abs": 0.5130429269723944,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2511499,
+      "row_index": 2511498,
+      "sim_ori": 42055,
+      "sim_des": 37157,
+      "name_ori": "Franklin, PA",
+      "name_des": "Rockingham, NC",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 4,
+      "SCTG.6": 0,
+      "SCTG.7": 255,
+      "total": 259,
+      "perishable_load_tons": 14.250000000000004,
+      "distance_miles": 887.42339930347,
+      "temp_c": 41.7320716367153,
+      "humidity_pct": 66.26329818054407,
+      "delay_hours": 3.0927235360953764,
+      "temp_deviation_abs": 37.7320716367153,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 7522089,
+      "row_index": 7522088,
+      "sim_ori": 55025,
+      "sim_des": 36013,
+      "name_ori": "Dane, WI",
+      "name_des": "Chautauqua, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 375365,
+      "total": 375365,
+      "perishable_load_tons": 1.947,
+      "distance_miles": 993.4039483364528,
+      "temp_c": -7.633763284458945,
+      "humidity_pct": 85.22538539224158,
+      "delay_hours": 5.721120988724996,
+      "temp_deviation_abs": 11.633763284458944,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 8576095,
+      "row_index": 8576094,
+      "sim_ori": 26151,
+      "sim_des": 26037,
+      "name_ori": "Sanilac, MI",
+      "name_des": "Clinton, MI",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 1629822,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1525657,
+      "total": 3155479,
+      "perishable_load_tons": 89017.2995000001,
+      "distance_miles": 474.0332178236101,
+      "temp_c": -17.3030426865193,
+      "humidity_pct": 92.75238328274943,
+      "delay_hours": 0.2653565738850504,
+      "temp_deviation_abs": 21.3030426865193,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 9086299,
+      "row_index": 9086298,
+      "sim_ori": 36007,
+      "sim_des": 9003,
+      "name_ori": "Broome, NY",
+      "name_des": "Hartford, CT",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 58,
+      "total": 58,
+      "perishable_load_tons": 2385.5605,
+      "distance_miles": 257.91605692636585,
+      "temp_c": 7.222716362111892,
+      "humidity_pct": 15.796152337442216,
+      "delay_hours": 0.7937683297380959,
+      "temp_deviation_abs": 3.222716362111892,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 1769782,
+      "row_index": 1769781,
+      "sim_ori": 17199,
+      "sim_des": 48367,
+      "name_ori": "Williamson, IL",
+      "name_des": "Parker, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 515,
+      "total": 515,
+      "perishable_load_tons": 654.8100000000004,
+      "distance_miles": 1482.4861863855433,
+      "temp_c": 5.797750170615082,
+      "humidity_pct": 5.840229209411578,
+      "delay_hours": 0.3589978611980632,
+      "temp_deviation_abs": 1.7977501706150818,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3380963,
+      "row_index": 3380962,
+      "sim_ori": 40051,
+      "sim_des": 40123,
+      "name_ori": "Grady, OK",
+      "name_des": "Pontotoc, OK",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 113,
+      "total": 113,
+      "perishable_load_tons": 147.98650000000004,
+      "distance_miles": 1551.00591457132,
+      "temp_c": 2.41621769382803,
+      "humidity_pct": 5.659706271084655,
+      "delay_hours": 1.111811204945954,
+      "temp_deviation_abs": 1.5837823061719694,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 8545729,
+      "row_index": 8545728,
+      "sim_ori": 22069,
+      "sim_des": 22069,
+      "name_ori": "Natchitoches, LA",
+      "name_des": "Natchitoches, LA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 263752,
+      "total": 263752,
+      "perishable_load_tons": 107.5265,
+      "distance_miles": 1177.2405989242045,
+      "temp_c": 7.808980571477443,
+      "humidity_pct": -0.7250044758094781,
+      "delay_hours": 1.4857269431552431,
+      "temp_deviation_abs": 3.808980571477443,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2022042,
+      "row_index": 2022041,
+      "sim_ori": 8123,
+      "sim_des": 6077,
+      "name_ori": "Weld, CO*",
+      "name_des": "San Joaquin, CA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1271164,
+      "total": 1271164,
+      "perishable_load_tons": 5796.945000000003,
+      "distance_miles": 1601.3115642569635,
+      "temp_c": 12.20425092298633,
+      "humidity_pct": 69.08630653784151,
+      "delay_hours": 0.0222454519920866,
+      "temp_deviation_abs": 8.20425092298633,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 7356608,
+      "row_index": 7356607,
+      "sim_ori": 53061,
+      "sim_des": 6067,
+      "name_ori": "Snohomish, WA",
+      "name_des": "Sacramento, CA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 6,
+      "total": 6,
+      "perishable_load_tons": 226.3,
+      "distance_miles": 1314.101060451753,
+      "temp_c": 7.444815632345076,
+      "humidity_pct": 0.6121487543660803,
+      "delay_hours": 3.5210482396374445,
+      "temp_deviation_abs": 3.444815632345076,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 4281842,
+      "row_index": 4281841,
+      "sim_ori": 19117,
+      "sim_des": 49053,
+      "name_ori": "Lucas, IA",
+      "name_des": "Washington, UT",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 9688883,
+      "total": 9688883,
+      "perishable_load_tons": 1393.1829999999995,
+      "distance_miles": 1088.102457979564,
+      "temp_c": 6.551834858675658,
+      "humidity_pct": 70.50090369250016,
+      "delay_hours": 2.736254905543159,
+      "temp_deviation_abs": 2.551834858675658,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 6223106,
+      "row_index": 6223105,
+      "sim_ori": 42009,
+      "sim_des": 40083,
+      "name_ori": "Bedford, PA",
+      "name_des": "Logan, OK",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 5538,
+      "total": 5538,
+      "perishable_load_tons": 135.125,
+      "distance_miles": 1309.1638345345546,
+      "temp_c": -0.770739052457184,
+      "humidity_pct": 0.6853814391591604,
+      "delay_hours": 1.053934038032364,
+      "temp_deviation_abs": 4.770739052457184,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 6080158,
+      "row_index": 6080157,
+      "sim_ori": 55029,
+      "sim_des": 55079,
+      "name_ori": "Door, WI",
+      "name_des": "Milwaukee, WI",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 43879,
+      "total": 43879,
+      "perishable_load_tons": 114.6615,
+      "distance_miles": 933.0083703044372,
+      "temp_c": 0.750648105603013,
+      "humidity_pct": 61.05469159791312,
+      "delay_hours": 0.3560372100031247,
+      "temp_deviation_abs": 3.249351894396987,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 1277465,
+      "row_index": 1277464,
+      "sim_ori": 51067,
+      "sim_des": 12053,
+      "name_ori": "Franklin, VA",
+      "name_des": "Hernando, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 137642,
+      "total": 137642,
+      "perishable_load_tons": 6538.393999999999,
+      "distance_miles": 449.3646976596085,
+      "temp_c": 20.488968883790157,
+      "humidity_pct": 68.04200919328491,
+      "delay_hours": 1.9903768243483797,
+      "temp_deviation_abs": 16.488968883790154,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5476721,
+      "row_index": 5476720,
+      "sim_ori": 19027,
+      "sim_des": 6073,
+      "name_ori": "Carroll, IA",
+      "name_des": "San Diego, CA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 111705,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 21,
+      "total": 111726,
+      "perishable_load_tons": 7170.040499999997,
+      "distance_miles": 1395.6469406681556,
+      "temp_c": 55.00345972424429,
+      "humidity_pct": 68.3538071973405,
+      "delay_hours": 0.3565154170663501,
+      "temp_deviation_abs": 51.00345972424429,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 8906781,
+      "row_index": 8906780,
+      "sim_ori": 48463,
+      "sim_des": 48507,
+      "name_ori": "Uvalde, TX",
+      "name_des": "Zavala, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 14174,
+      "total": 14174,
+      "perishable_load_tons": 407.8035,
+      "distance_miles": 369.6445109915425,
+      "temp_c": 19.73368992075315,
+      "humidity_pct": 84.67616725685164,
+      "delay_hours": 5.764041775096183,
+      "temp_deviation_abs": 15.73368992075315,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 2503197,
+      "row_index": 2503196,
+      "sim_ori": 35049,
+      "sim_des": 48111,
+      "name_ori": "Santa Fe, NM",
+      "name_des": "Dallam, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 785305,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 785305,
+      "perishable_load_tons": 19.7005,
+      "distance_miles": 1418.0522679257374,
+      "temp_c": 5.9127050713149965,
+      "humidity_pct": 30.875189622816222,
+      "delay_hours": 7.062374522108659,
+      "temp_deviation_abs": 1.9127050713149965,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 3126391,
+      "row_index": 3126390,
+      "sim_ori": 55055,
+      "sim_des": 6069,
+      "name_ori": "Jefferson, WI",
+      "name_des": "San Benito, CA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 2507,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 2507,
+      "perishable_load_tons": 28497.417500000003,
+      "distance_miles": 1391.829435452383,
+      "temp_c": 91.90145715922483,
+      "humidity_pct": 69.30086081233146,
+      "delay_hours": 0.1567671855958664,
+      "temp_deviation_abs": 87.90145715922485,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 832242,
+      "row_index": 832241,
+      "sim_ori": 51181,
+      "sim_des": 51135,
+      "name_ori": "Surry, VA",
+      "name_des": "Nottoway, VA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1599,
+      "total": 1599,
+      "perishable_load_tons": 4840.862500000001,
+      "distance_miles": 1577.1620566044105,
+      "temp_c": 42.51283261899879,
+      "humidity_pct": 62.6018649018165,
+      "delay_hours": 4.2497843484214615,
+      "temp_deviation_abs": 38.51283261899879,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 7872657,
+      "row_index": 7872656,
+      "sim_ori": 39143,
+      "sim_des": 5119,
+      "name_ori": "Sandusky, OH",
+      "name_des": "Pulaski, AR",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 2227,
+      "total": 2227,
+      "perishable_load_tons": 124.7005,
+      "distance_miles": 1401.1944469883376,
+      "temp_c": 3.582278945314324,
+      "humidity_pct": 63.7019989525024,
+      "delay_hours": 1.2148665182741916,
+      "temp_deviation_abs": 0.4177210546856766,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5087677,
+      "row_index": 5087676,
+      "sim_ori": 26099,
+      "sim_des": 26093,
+      "name_ori": "Macomb, MI",
+      "name_des": "Livingston, MI",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 21,
+      "total": 21,
+      "perishable_load_tons": 8535.021,
+      "distance_miles": 211.0157081687905,
+      "temp_c": 11.757407060794746,
+      "humidity_pct": 64.77779671887858,
+      "delay_hours": 1.467670922355266,
+      "temp_deviation_abs": 7.757407060794746,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 6942085,
+      "row_index": 6942084,
+      "sim_ori": 40037,
+      "sim_des": 20035,
+      "name_ori": "Creek, OK",
+      "name_des": "Cowley, KS",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 6334066,
+      "SCTG.4": 0,
+      "SCTG.5": 452,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 6334518,
+      "perishable_load_tons": 170.5285,
+      "distance_miles": 276.73367657111726,
+      "temp_c": -18.271521908913943,
+      "humidity_pct": 69.35258764192562,
+      "delay_hours": 2.844348689428596,
+      "temp_deviation_abs": 22.271521908913943,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 7867524,
+      "row_index": 7867523,
+      "sim_ori": 39019,
+      "sim_des": 37097,
+      "name_ori": "Carroll, OH",
+      "name_des": "Iredell, NC",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 1,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 1,
+      "perishable_load_tons": 7126.664999999999,
+      "distance_miles": 1547.1410045429584,
+      "temp_c": 6.830515974588332,
+      "humidity_pct": 72.3231504277891,
+      "delay_hours": 5.760187219067586,
+      "temp_deviation_abs": 2.830515974588332,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 8955037,
+      "row_index": 8955036,
+      "sim_ori": 37133,
+      "sim_des": 12109,
+      "name_ori": "Onslow, NC",
+      "name_des": "St. Johns, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 269,
+      "total": 269,
+      "perishable_load_tons": 8087.473500000005,
+      "distance_miles": 424.4455698158719,
+      "temp_c": 6.838731128703099,
+      "humidity_pct": 85.3046664248233,
+      "delay_hours": 1.5600384591804848,
+      "temp_deviation_abs": 2.838731128703099,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 9374548,
+      "row_index": 9374547,
+      "sim_ori": 19053,
+      "sim_des": 28105,
+      "name_ori": "Decatur, IA",
+      "name_des": "Oktibbeha, MS",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 44172149,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 44172149,
+      "perishable_load_tons": 6.168500000000002,
+      "distance_miles": 385.7788214802208,
+      "temp_c": 8.69555362212045,
+      "humidity_pct": 17.99112863968265,
+      "delay_hours": 0.5907136521972602,
+      "temp_deviation_abs": 4.69555362212045,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 6026991,
+      "row_index": 6026990,
+      "sim_ori": 27015,
+      "sim_des": 27003,
+      "name_ori": "Brown, MN",
+      "name_des": "Anoka, MN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 19525,
+      "total": 19525,
+      "perishable_load_tons": 5342.234,
+      "distance_miles": 993.5274267854072,
+      "temp_c": 57.3480687624379,
+      "humidity_pct": 66.57795644087398,
+      "delay_hours": 1.4824484679494176,
+      "temp_deviation_abs": 53.3480687624379,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 612134,
+      "row_index": 612133,
+      "sim_ori": 34041,
+      "sim_des": 36109,
+      "name_ori": "Warren, NJ",
+      "name_des": "Tompkins, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 25326,
+      "total": 25326,
+      "perishable_load_tons": 248.169,
+      "distance_miles": 901.7154801804734,
+      "temp_c": 41.66460502195552,
+      "humidity_pct": 64.19434372778869,
+      "delay_hours": 1.0948607027647284,
+      "temp_deviation_abs": 37.66460502195552,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 8986964,
+      "row_index": 8986963,
+      "sim_ori": 13059,
+      "sim_des": 12111,
+      "name_ori": "Clarke, GA",
+      "name_des": "St. Lucie, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 21,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 21,
+      "perishable_load_tons": 76.09799999999998,
+      "distance_miles": 1861.175523341376,
+      "temp_c": -0.0982458500396301,
+      "humidity_pct": 9.52815039070446,
+      "delay_hours": 1.898882425037221,
+      "temp_deviation_abs": 4.09824585003963,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3006892,
+      "row_index": 3006891,
+      "sim_ori": 42021,
+      "sim_des": 36009,
+      "name_ori": "Cambria, PA",
+      "name_des": "Cattaraugus, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 32453875,
+      "total": 32453875,
+      "perishable_load_tons": 47449.72349999999,
+      "distance_miles": 692.2393722874116,
+      "temp_c": 8.011653402263605,
+      "humidity_pct": 73.14928941829851,
+      "delay_hours": 3.1577287323926546,
+      "temp_deviation_abs": 4.011653402263605,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3329268,
+      "row_index": 3329267,
+      "sim_ori": 6073,
+      "sim_des": 32510,
+      "name_ori": "San Diego, CA",
+      "name_des": "Carson City (Independent City), NV",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 556091,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 556091,
+      "perishable_load_tons": 2175.9814999999994,
+      "distance_miles": 718.712842380432,
+      "temp_c": 7.209245029473578,
+      "humidity_pct": 63.52107710646351,
+      "delay_hours": 1.5986844863245009,
+      "temp_deviation_abs": 3.2092450294735784,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 308002,
+      "row_index": 308001,
+      "sim_ori": 30067,
+      "sim_des": 30031,
+      "name_ori": "Park, MT",
+      "name_des": "Gallatin, MT",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 29,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 10239403,
+      "total": 10239432,
+      "perishable_load_tons": 28.068500000000004,
+      "distance_miles": 518.4777860053925,
+      "temp_c": 28.294896289880917,
+      "humidity_pct": 66.3303034135313,
+      "delay_hours": 1.5649472943561418,
+      "temp_deviation_abs": 24.294896289880917,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5087195,
+      "row_index": 5087194,
+      "sim_ori": 26087,
+      "sim_des": 26091,
+      "name_ori": "Lapeer, MI",
+      "name_des": "Lenawee, MI",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1234,
+      "total": 1234,
+      "perishable_load_tons": 1628.9619999999995,
+      "distance_miles": 630.4180412581469,
+      "temp_c": 0.1406870669676259,
+      "humidity_pct": 73.29243183016436,
+      "delay_hours": 1.4691742254092968,
+      "temp_deviation_abs": 3.859312933032374,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5087811,
+      "row_index": 5087810,
+      "sim_ori": 28107,
+      "sim_des": 39017,
+      "name_ori": "Panola, MS",
+      "name_des": "Butler, OH",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 8780392,
+      "total": 8780392,
+      "perishable_load_tons": 5.842999999999999,
+      "distance_miles": 1412.3393993923144,
+      "temp_c": 8.8955004103867,
+      "humidity_pct": 63.89431760865927,
+      "delay_hours": 0.2050681308371002,
+      "temp_deviation_abs": 4.895500410386701,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5686963,
+      "row_index": 5686962,
+      "sim_ori": 6013,
+      "sim_des": 6037,
+      "name_ori": "Contra Costa, CA",
+      "name_des": "Los Angeles, CA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 1133,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 96833811,
+      "total": 96834944,
+      "perishable_load_tons": 9884.5405,
+      "distance_miles": 628.0594133198246,
+      "temp_c": -21.71064465788099,
+      "humidity_pct": 85.91224130113773,
+      "delay_hours": 0.4359044089061876,
+      "temp_deviation_abs": 25.71064465788099,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3601933,
+      "row_index": 3601932,
+      "sim_ori": 48325,
+      "sim_des": 22033,
+      "name_ori": "Medina, TX",
+      "name_des": "East Baton Rouge, LA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 171873,
+      "total": 171873,
+      "perishable_load_tons": 343.803,
+      "distance_miles": 113.31800479890914,
+      "temp_c": 9.355125195558657,
+      "humidity_pct": 67.96170645036122,
+      "delay_hours": 1.1773542850346628,
+      "temp_deviation_abs": 5.3551251955586565,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 9779466,
+      "row_index": 9779465,
+      "sim_ori": 41059,
+      "sim_des": 53003,
+      "name_ori": "Umatilla, OR",
+      "name_des": "Asotin, WA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 26716607,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 26550,
+      "total": 26743157,
+      "perishable_load_tons": 0.077,
+      "distance_miles": 386.8767706481202,
+      "temp_c": 46.735927444100746,
+      "humidity_pct": 69.89108494205222,
+      "delay_hours": 1.0769162602952709,
+      "temp_deviation_abs": 42.735927444100746,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 1652872,
+      "row_index": 1652871,
+      "sim_ori": 41043,
+      "sim_des": 53021,
+      "name_ori": "Linn, OR",
+      "name_des": "Franklin, WA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 18526462,
+      "SCTG.7": 240223,
+      "total": 18766685,
+      "perishable_load_tons": 22.1045,
+      "distance_miles": 1574.9035599081858,
+      "temp_c": 3.02903703819656,
+      "humidity_pct": 65.62859725281697,
+      "delay_hours": 2.0355344266870574,
+      "temp_deviation_abs": 0.97096296180344,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2980808,
+      "row_index": 2980807,
+      "sim_ori": 6065,
+      "sim_des": 37119,
+      "name_ori": "Riverside, CA",
+      "name_des": "Mecklenburg, NC",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 4019,
+      "total": 4019,
+      "perishable_load_tons": 10274.258000000002,
+      "distance_miles": 1698.1898384134429,
+      "temp_c": -26.38190792235105,
+      "humidity_pct": 28.299756681174756,
+      "delay_hours": 1.452474877970269,
+      "temp_deviation_abs": 30.38190792235105,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 8709518,
+      "row_index": 8709517,
+      "sim_ori": 5133,
+      "sim_des": 48097,
+      "name_ori": "Sevier, AR",
+      "name_des": "Cooke, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 143380,
+      "total": 143380,
+      "perishable_load_tons": 55383.83050000001,
+      "distance_miles": 1086.0950457126926,
+      "temp_c": 49.13097354973254,
+      "humidity_pct": 72.59796204968424,
+      "delay_hours": 1.1227086072298538,
+      "temp_deviation_abs": 45.13097354973254,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5706211,
+      "row_index": 5706210,
+      "sim_ori": 48241,
+      "sim_des": 48241,
+      "name_ori": "Jasper, TX",
+      "name_des": "Jasper, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 531807840,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1563,
+      "total": 531809403,
+      "perishable_load_tons": 3858.4764999999993,
+      "distance_miles": 1571.9187198413022,
+      "temp_c": 25.307308685649755,
+      "humidity_pct": 9.983353347821254,
+      "delay_hours": 4.504223511063122,
+      "temp_deviation_abs": 21.307308685649755,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 1089965,
+      "row_index": 1089964,
+      "sim_ori": 1071,
+      "sim_des": 17043,
+      "name_ori": "Jackson, AL",
+      "name_des": "DuPage, IL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 4889878,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 4889878,
+      "perishable_load_tons": 19401.508,
+      "distance_miles": 253.7366176702183,
+      "temp_c": 2.988204110048066,
+      "humidity_pct": 2.9107669714927096,
+      "delay_hours": 4.036848668883135,
+      "temp_deviation_abs": 1.011795889951934,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3645478,
+      "row_index": 3645477,
+      "sim_ori": 17191,
+      "sim_des": 17119,
+      "name_ori": "Wayne, IL",
+      "name_des": "Madison, IL",
+      "SCTG.1": 0,
+      "SCTG.2": 61030338,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 7,
+      "total": 61030345,
+      "perishable_load_tons": 10.908,
+      "distance_miles": 877.5585852413952,
+      "temp_c": 13.38321577424873,
+      "humidity_pct": 101.63682960114411,
+      "delay_hours": 2.405956695090599,
+      "temp_deviation_abs": 9.38321577424873,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 6271534,
+      "row_index": 6271533,
+      "sim_ori": 51105,
+      "sim_des": 39049,
+      "name_ori": "Lee, VA",
+      "name_des": "Franklin, OH",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 18683,
+      "total": 18683,
+      "perishable_load_tons": 33282.24199999997,
+      "distance_miles": 1605.1523883281477,
+      "temp_c": 48.18140434478664,
+      "humidity_pct": 63.83563435049735,
+      "delay_hours": 5.495075322558795,
+      "temp_deviation_abs": 44.18140434478664,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 4872795,
+      "row_index": 4872794,
+      "sim_ori": 21029,
+      "sim_des": 21111,
+      "name_ori": "Bullitt, KY",
+      "name_des": "Jefferson, KY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 366443,
+      "SCTG.5": 0,
+      "SCTG.6": 5751183,
+      "SCTG.7": 1860,
+      "total": 6119486,
+      "perishable_load_tons": 195.99,
+      "distance_miles": 822.2018844519497,
+      "temp_c": -23.19783102817915,
+      "humidity_pct": 64.73872350934923,
+      "delay_hours": 7.310348361039817,
+      "temp_deviation_abs": 27.19783102817915,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3439417,
+      "row_index": 3439416,
+      "sim_ori": 46125,
+      "sim_des": 25013,
+      "name_ori": "Turner, SD",
+      "name_des": "Hampden, MA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 71,
+      "total": 71,
+      "perishable_load_tons": 17780.761000000002,
+      "distance_miles": 124.8817107863719,
+      "temp_c": 100.74760724893429,
+      "humidity_pct": 87.8113597933206,
+      "delay_hours": 0.9224469759520322,
+      "temp_deviation_abs": 96.74760724893429,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5700602,
+      "row_index": 5700601,
+      "sim_ori": 17005,
+      "sim_des": 18125,
+      "name_ori": "Bond, IL",
+      "name_des": "Pike, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 5211207,
+      "total": 5211207,
+      "perishable_load_tons": 48.472,
+      "distance_miles": 398.326309670884,
+      "temp_c": 100.2220582130842,
+      "humidity_pct": 82.0192814978053,
+      "delay_hours": 1.520238976863264,
+      "temp_deviation_abs": 96.2220582130842,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 4534481,
+      "row_index": 4534480,
+      "sim_ori": 51840,
+      "sim_des": 36107,
+      "name_ori": "Winchester City, VA",
+      "name_des": "Tioga, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 2058673,
+      "total": 2058673,
+      "perishable_load_tons": 0.178,
+      "distance_miles": 631.978789238133,
+      "temp_c": 5.503138202922451,
+      "humidity_pct": 69.93014966553375,
+      "delay_hours": 5.008695198807679,
+      "temp_deviation_abs": 1.5031382029224511,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 9442343,
+      "row_index": 9442342,
+      "sim_ori": 31121,
+      "sim_des": 18001,
+      "name_ori": "Merrick, NE",
+      "name_des": "Adams, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 7995364,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 7995364,
+      "perishable_load_tons": 137942.30000000005,
+      "distance_miles": 1453.1389058675982,
+      "temp_c": 93.26315624784309,
+      "humidity_pct": 80.03192459485459,
+      "delay_hours": 2.247991984693914,
+      "temp_deviation_abs": 89.26315624784307,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 3990927,
+      "row_index": 3990926,
+      "sim_ori": 34027,
+      "sim_des": 53061,
+      "name_ori": "Morris, NJ",
+      "name_des": "Snohomish, WA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 746148,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 276052,
+      "total": 1022200,
+      "perishable_load_tons": 8.58,
+      "distance_miles": 1344.393666685816,
+      "temp_c": 47.20495232763446,
+      "humidity_pct": 66.47417069481638,
+      "delay_hours": 1.4979298383067217,
+      "temp_deviation_abs": 43.20495232763446,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 226,
+      "row_index": 225,
+      "sim_ori": 32019,
+      "sim_des": 32019,
+      "name_ori": "Lyon, NV",
+      "name_des": "Lyon, NV",
+      "SCTG.1": 79185086,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 3996371,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 3420189,
+      "total": 86601646,
+      "perishable_load_tons": 329.5055,
+      "distance_miles": 1826.1072296442724,
+      "temp_c": 0.6248420124641898,
+      "humidity_pct": 72.78751640329894,
+      "delay_hours": 0.0865571777342121,
+      "temp_deviation_abs": 3.37515798753581,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5984647,
+      "row_index": 5984646,
+      "sim_ori": 29027,
+      "sim_des": 29189,
+      "name_ori": "Callaway, MO",
+      "name_des": "St. Louis, MO",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 29784,
+      "SCTG.4": 0,
+      "SCTG.5": 25,
+      "SCTG.6": 64865570,
+      "SCTG.7": 1595157,
+      "total": 66490536,
+      "perishable_load_tons": 1.522,
+      "distance_miles": 194.78137569456425,
+      "temp_c": 20.491745082218763,
+      "humidity_pct": 69.5699855790422,
+      "delay_hours": 10.119864303709718,
+      "temp_deviation_abs": 16.491745082218763,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 4769351,
+      "row_index": 4769350,
+      "sim_ori": 25001,
+      "sim_des": 51085,
+      "name_ori": "Barnstable, MA",
+      "name_des": "Hanover, VA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 67,
+      "total": 67,
+      "perishable_load_tons": 12.7825,
+      "distance_miles": 1994.1314804844749,
+      "temp_c": 18.594010902649316,
+      "humidity_pct": 102.32070525804409,
+      "delay_hours": 0.8689501253795967,
+      "temp_deviation_abs": 14.594010902649313,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 1180497,
+      "row_index": 1180496,
+      "sim_ori": 34035,
+      "sim_des": 42079,
+      "name_ori": "Somerset, NJ",
+      "name_des": "Luzerne, PA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 3617149,
+      "SCTG.7": 32608,
+      "total": 3649757,
+      "perishable_load_tons": 159356.27250000002,
+      "distance_miles": 1866.4062544919057,
+      "temp_c": -19.371697737362148,
+      "humidity_pct": 13.022389879084312,
+      "delay_hours": 9.192279651574523,
+      "temp_deviation_abs": 23.371697737362148,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2168777,
+      "row_index": 2168776,
+      "sim_ori": 51013,
+      "sim_des": 34023,
+      "name_ori": "Arlington, VA",
+      "name_des": "Middlesex, NJ",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 784,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 784,
+      "perishable_load_tons": 9402.484,
+      "distance_miles": 1353.6660554722714,
+      "temp_c": 100.13720060252618,
+      "humidity_pct": 70.98035831801714,
+      "delay_hours": 5.222857320764724,
+      "temp_deviation_abs": 96.13720060252618,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5956964,
+      "row_index": 5956963,
+      "sim_ori": 19161,
+      "sim_des": 8005,
+      "name_ori": "Sac, IA",
+      "name_des": "Arapahoe, CO",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 7,
+      "total": 7,
+      "perishable_load_tons": 66308.56800000003,
+      "distance_miles": 1270.8066825125625,
+      "temp_c": -18.17641695292568,
+      "humidity_pct": 13.397669223516058,
+      "delay_hours": 1.668551360404842,
+      "temp_deviation_abs": 22.17641695292568,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2540362,
+      "row_index": 2540361,
+      "sim_ori": 37033,
+      "sim_des": 25003,
+      "name_ori": "Caswell, NC",
+      "name_des": "Berkshire, MA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 9119,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 9119,
+      "perishable_load_tons": 1.5,
+      "distance_miles": 1749.5261200935831,
+      "temp_c": 8.690737309430629,
+      "humidity_pct": 68.25871559675026,
+      "delay_hours": 0.7167786369945115,
+      "temp_deviation_abs": 4.690737309430629,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5534386,
+      "row_index": 5534385,
+      "sim_ori": 48213,
+      "sim_des": 48467,
+      "name_ori": "Henderson, TX",
+      "name_des": "Van Zandt, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 233,
+      "total": 233,
+      "perishable_load_tons": 2341.2819999999983,
+      "distance_miles": 1009.4033723925612,
+      "temp_c": 7.75149779988084,
+      "humidity_pct": 67.75900423547253,
+      "delay_hours": 1.0145398554094744,
+      "temp_deviation_abs": 3.75149779988084,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3006761,
+      "row_index": 3006760,
+      "sim_ori": 42065,
+      "sim_des": 36029,
+      "name_ori": "Jefferson, PA",
+      "name_des": "Erie, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 63719,
+      "SCTG.7": 15753,
+      "total": 79472,
+      "perishable_load_tons": 71473.07499999992,
+      "distance_miles": 319.34432162348213,
+      "temp_c": 6.724094377373952,
+      "humidity_pct": 88.5233450735829,
+      "delay_hours": 8.449387611315506,
+      "temp_deviation_abs": 2.724094377373952,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 349442,
+      "row_index": 349441,
+      "sim_ori": 34027,
+      "sim_des": 34023,
+      "name_ori": "Morris, NJ",
+      "name_des": "Middlesex, NJ",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 142638,
+      "total": 142638,
+      "perishable_load_tons": 34.7685,
+      "distance_miles": 1901.098284924168,
+      "temp_c": -17.137245562758906,
+      "humidity_pct": 71.23154703047317,
+      "delay_hours": 4.464942070477804,
+      "temp_deviation_abs": 21.137245562758903,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 1864948,
+      "row_index": 1864947,
+      "sim_ori": 41017,
+      "sim_des": 12099,
+      "name_ori": "Deschutes, OR",
+      "name_des": "Palm Beach, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 150,
+      "total": 150,
+      "perishable_load_tons": 132079.76000000007,
+      "distance_miles": 437.9130706003248,
+      "temp_c": 100.6252786232552,
+      "humidity_pct": 67.8705786348144,
+      "delay_hours": 4.40953970052348,
+      "temp_deviation_abs": 96.6252786232552,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 1181456,
+      "row_index": 1181455,
+      "sim_ori": 34039,
+      "sim_des": 42069,
+      "name_ori": "Union, NJ",
+      "name_des": "Lackawanna, PA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 47624528,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 313,
+      "total": 47624841,
+      "perishable_load_tons": 550.5575,
+      "distance_miles": 934.1616497173228,
+      "temp_c": 5.540286319601733,
+      "humidity_pct": 67.49937213202557,
+      "delay_hours": 1.9332918215366124,
+      "temp_deviation_abs": 1.540286319601733,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5787038,
+      "row_index": 5787037,
+      "sim_ori": 18003,
+      "sim_des": 18099,
+      "name_ori": "Allen, IN",
+      "name_des": "Marshall, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 205841,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 6943,
+      "total": 212784,
+      "perishable_load_tons": 384.82499999999993,
+      "distance_miles": 836.9198105866923,
+      "temp_c": 98.46995246483286,
+      "humidity_pct": 15.214448510471437,
+      "delay_hours": 0.5451169417388882,
+      "temp_deviation_abs": 94.46995246483286,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 4000283,
+      "row_index": 4000282,
+      "sim_ori": 42003,
+      "sim_des": 12053,
+      "name_ori": "Allegheny, PA",
+      "name_des": "Hernando, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 134080,
+      "total": 134080,
+      "perishable_load_tons": 75018.16099999998,
+      "distance_miles": 446.8942688395194,
+      "temp_c": 99.63859938145102,
+      "humidity_pct": 1.4433438486707175,
+      "delay_hours": 1.977242879397911,
+      "temp_deviation_abs": 95.63859938145102,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 4069163,
+      "row_index": 4069162,
+      "sim_ori": 48113,
+      "sim_des": 6037,
+      "name_ori": "Dallas, TX",
+      "name_des": "Los Angeles, CA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 202612,
+      "SCTG.6": 0,
+      "SCTG.7": 4687762,
+      "total": 4890374,
+      "perishable_load_tons": 5.444,
+      "distance_miles": 1528.887162416696,
+      "temp_c": 17.09146965642977,
+      "humidity_pct": 71.32595864963419,
+      "delay_hours": 1.4749030262253262,
+      "temp_deviation_abs": 13.09146965642977,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 763175,
+      "row_index": 763174,
+      "sim_ori": 27005,
+      "sim_des": 39165,
+      "name_ori": "Becker, MN",
+      "name_des": "Warren, OH",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 7,
+      "total": 7,
+      "perishable_load_tons": 661.1330000000003,
+      "distance_miles": 1470.8797542613752,
+      "temp_c": 29.070315363089293,
+      "humidity_pct": 64.256296695773,
+      "delay_hours": 1.1302348810448128,
+      "temp_deviation_abs": 25.070315363089293,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 7173183,
+      "row_index": 7173182,
+      "sim_ori": 22115,
+      "sim_des": 48361,
+      "name_ori": "Vernon, LA",
+      "name_des": "Orange, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 184,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 184,
+      "perishable_load_tons": 26239.829500000007,
+      "distance_miles": 1194.197420296953,
+      "temp_c": 99.95138922063096,
+      "humidity_pct": 70.21467880574627,
+      "delay_hours": 0.257785865964082,
+      "temp_deviation_abs": 95.95138922063096,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 2367803,
+      "row_index": 2367802,
+      "sim_ori": 5063,
+      "sim_des": 12031,
+      "name_ori": "Independence, AR",
+      "name_des": "Duval, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 6,
+      "total": 6,
+      "perishable_load_tons": 2357.773000000001,
+      "distance_miles": 1227.3225304833452,
+      "temp_c": 3.6799563400164,
+      "humidity_pct": 75.48757536591339,
+      "delay_hours": 0.1651974374440393,
+      "temp_deviation_abs": 0.3200436599835998,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 7038171,
+      "row_index": 7038170,
+      "sim_ori": 42069,
+      "sim_des": 42021,
+      "name_ori": "Lackawanna, PA",
+      "name_des": "Cambria, PA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 32978,
+      "total": 32978,
+      "perishable_load_tons": 1103.794,
+      "distance_miles": 1470.5631710025084,
+      "temp_c": 100.13561280709958,
+      "humidity_pct": 60.49320576321404,
+      "delay_hours": 0.4801289953538217,
+      "temp_deviation_abs": 96.13561280709958,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 4057584,
+      "row_index": 4057583,
+      "sim_ori": 48039,
+      "sim_des": 48157,
+      "name_ori": "Brazoria, TX",
+      "name_des": "Fort Bend, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 602,
+      "SCTG.6": 0,
+      "SCTG.7": 3095588,
+      "total": 3096190,
+      "perishable_load_tons": 2.312,
+      "distance_miles": 466.912360792329,
+      "temp_c": 7.546071876297536,
+      "humidity_pct": 76.00287283184963,
+      "delay_hours": 1.0368946139235606,
+      "temp_deviation_abs": 3.5460718762975363,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2902389,
+      "row_index": 2902388,
+      "sim_ori": 40089,
+      "sim_des": 48291,
+      "name_ori": "McCurtain, OK",
+      "name_des": "Liberty, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 3089,
+      "total": 3089,
+      "perishable_load_tons": 16505.625,
+      "distance_miles": 816.2539917331385,
+      "temp_c": 2.6048678748973977,
+      "humidity_pct": 61.72831693721212,
+      "delay_hours": 0.095904638813588,
+      "temp_deviation_abs": 1.3951321251026023,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 8882980,
+      "row_index": 8882979,
+      "sim_ori": 48203,
+      "sim_des": 48161,
+      "name_ori": "Harrison, TX",
+      "name_des": "Freestone, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 82572,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 12,
+      "total": 82584,
+      "perishable_load_tons": 8.3055,
+      "distance_miles": 766.3140047906959,
+      "temp_c": 49.62594018004643,
+      "humidity_pct": 90.68626863694648,
+      "delay_hours": 3.33736430282226,
+      "temp_deviation_abs": 45.62594018004643,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 8306789,
+      "row_index": 8306788,
+      "sim_ori": 18021,
+      "sim_des": 18097,
+      "name_ori": "Clay, IN",
+      "name_des": "Marion, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 3623,
+      "total": 3623,
+      "perishable_load_tons": 949.5,
+      "distance_miles": 459.7090261790861,
+      "temp_c": 12.1540060612195,
+      "humidity_pct": -0.675750731227603,
+      "delay_hours": 1.0027538335100574,
+      "temp_deviation_abs": 8.1540060612195,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5636811,
+      "row_index": 5636810,
+      "sim_ori": 27153,
+      "sim_des": 27037,
+      "name_ori": "Todd, MN",
+      "name_des": "Dakota, MN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 779500,
+      "total": 779500,
+      "perishable_load_tons": 54.496,
+      "distance_miles": 1026.129668990121,
+      "temp_c": 44.05719833384364,
+      "humidity_pct": 84.23640973979526,
+      "delay_hours": 1.4906739856076032,
+      "temp_deviation_abs": 40.05719833384364,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 7555904,
+      "row_index": 7555903,
+      "sim_ori": 5051,
+      "sim_des": 5051,
+      "name_ori": "Garland, AR",
+      "name_des": "Garland, AR",
+      "SCTG.1": 0,
+      "SCTG.2": 9625863,
+      "SCTG.3": 0,
+      "SCTG.4": 45363399,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 18371,
+      "total": 55007633,
+      "perishable_load_tons": 1433.2204999999983,
+      "distance_miles": 1035.765543860806,
+      "temp_c": 13.870739670741903,
+      "humidity_pct": 2.886809731749378,
+      "delay_hours": 0.1793272574662757,
+      "temp_deviation_abs": 9.870739670741903,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 9163265,
+      "row_index": 9163264,
+      "sim_ori": 48197,
+      "sim_des": 48075,
+      "name_ori": "Hardeman, TX",
+      "name_des": "Childress, TX",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 980176,
+      "total": 980176,
+      "perishable_load_tons": 28.3645,
+      "distance_miles": 1935.1317436934607,
+      "temp_c": 25.497006551594907,
+      "humidity_pct": 0.9788296626965032,
+      "delay_hours": 2.369448245603769,
+      "temp_deviation_abs": 21.497006551594907,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 8301535,
+      "row_index": 8301534,
+      "sim_ori": 18155,
+      "sim_des": 18097,
+      "name_ori": "Switzerland, IN",
+      "name_des": "Marion, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 3,
+      "total": 3,
+      "perishable_load_tons": 3.1204999999999994,
+      "distance_miles": 946.8868050232272,
+      "temp_c": 3.0430099050089856,
+      "humidity_pct": 11.80644452406969,
+      "delay_hours": 0.4587220545390455,
+      "temp_deviation_abs": 0.9569900949910144,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 1295428,
+      "row_index": 1295427,
+      "sim_ori": 50015,
+      "sim_des": 36043,
+      "name_ori": "Lamoille, VT",
+      "name_des": "Herkimer, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 48217,
+      "total": 48217,
+      "perishable_load_tons": 211.74100000000013,
+      "distance_miles": 1736.888643782018,
+      "temp_c": 6.129045500177599,
+      "humidity_pct": 67.83512148583593,
+      "delay_hours": 0.9928467621129644,
+      "temp_deviation_abs": 2.1290455001775985,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 9121498,
+      "row_index": 9121497,
+      "sim_ori": 13157,
+      "sim_des": 13129,
+      "name_ori": "Jackson, GA",
+      "name_des": "Gordon, GA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 460951,
+      "total": 460951,
+      "perishable_load_tons": 584.0550000000001,
+      "distance_miles": 314.25790344347035,
+      "temp_c": 29.639176688525204,
+      "humidity_pct": 62.34629858503755,
+      "delay_hours": 3.040633302026861,
+      "temp_deviation_abs": 25.639176688525204,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 6431369,
+      "row_index": 6431368,
+      "sim_ori": 17047,
+      "sim_des": 18093,
+      "name_ori": "Edwards, IL",
+      "name_des": "Lawrence, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 24678253,
+      "total": 24678253,
+      "perishable_load_tons": 5114.265000000002,
+      "distance_miles": 1315.850231420202,
+      "temp_c": 7.241739237788254,
+      "humidity_pct": 69.60833344433217,
+      "delay_hours": 3.103778279530134,
+      "temp_deviation_abs": 3.241739237788254,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 457125,
+      "row_index": 457124,
+      "sim_ori": 13291,
+      "sim_des": 34005,
+      "name_ori": "Union, GA",
+      "name_des": "Burlington, NJ",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 477301,
+      "total": 477301,
+      "perishable_load_tons": 5.255999999999999,
+      "distance_miles": 251.13618371280407,
+      "temp_c": -100.12174321950911,
+      "humidity_pct": 69.89725398423947,
+      "delay_hours": 0.5627948153806691,
+      "temp_deviation_abs": 104.12174321950911,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 3944719,
+      "row_index": 3944718,
+      "sim_ori": 39001,
+      "sim_des": 21049,
+      "name_ori": "Adams, OH",
+      "name_des": "Clark, KY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 12837,
+      "total": 12837,
+      "perishable_load_tons": 32180.0,
+      "distance_miles": 1865.1240851428245,
+      "temp_c": 48.40223360412682,
+      "humidity_pct": 36.5606720826619,
+      "delay_hours": 0.5912825874307788,
+      "temp_deviation_abs": 44.40223360412682,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 1826183,
+      "row_index": 1826182,
+      "sim_ori": 36019,
+      "sim_des": 23013,
+      "name_ori": "Clinton, NY",
+      "name_des": "Knox, ME",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 62793,
+      "total": 62793,
+      "perishable_load_tons": 18231.931000000004,
+      "distance_miles": 818.9652353837954,
+      "temp_c": 7.608098616540009,
+      "humidity_pct": 72.12750022989292,
+      "delay_hours": 3.87074249061019,
+      "temp_deviation_abs": 3.608098616540009,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 8202,
+      "row_index": 8201,
+      "sim_ori": 25023,
+      "sim_des": 9007,
+      "name_ori": "Plymouth, MA",
+      "name_des": "Middlesex, CT",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 2459,
+      "total": 2459,
+      "perishable_load_tons": 19073.81049999999,
+      "distance_miles": 481.97794620961577,
+      "temp_c": -3.480365026261102,
+      "humidity_pct": 70.62792010649044,
+      "delay_hours": 0.0452986403066169,
+      "temp_deviation_abs": 7.480365026261103,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2671408,
+      "row_index": 2671407,
+      "sim_ori": 12121,
+      "sim_des": 13051,
+      "name_ori": "Suwannee, FL",
+      "name_des": "Chatham, GA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 316814,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 316814,
+      "perishable_load_tons": 9.6095,
+      "distance_miles": 1519.2774306206372,
+      "temp_c": 9.337326822878673,
+      "humidity_pct": 82.3803419330899,
+      "delay_hours": 1.5031941804028894,
+      "temp_deviation_abs": 5.337326822878673,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 1353315,
+      "row_index": 1353314,
+      "sim_ori": 47013,
+      "sim_des": 47155,
+      "name_ori": "Campbell, TN",
+      "name_des": "Sevier, TN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 553894,
+      "total": 553894,
+      "perishable_load_tons": 18610.0,
+      "distance_miles": 964.8961173809048,
+      "temp_c": -20.11707172263616,
+      "humidity_pct": 65.07444470732958,
+      "delay_hours": 0.1255917272973707,
+      "temp_deviation_abs": 24.11707172263616,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 6805621,
+      "row_index": 6805620,
+      "sim_ori": 42075,
+      "sim_des": 42009,
+      "name_ori": "Lebanon, PA",
+      "name_des": "Bedford, PA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 470505,
+      "total": 470505,
+      "perishable_load_tons": 99.4195,
+      "distance_miles": 598.8807397792929,
+      "temp_c": 6.4931166976378005,
+      "humidity_pct": 63.85870613869552,
+      "delay_hours": 0.4720480030767041,
+      "temp_deviation_abs": 2.4931166976378005,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 2597783,
+      "row_index": 2597782,
+      "sim_ori": 49009,
+      "sim_des": 26081,
+      "name_ori": "Daggett, UT",
+      "name_des": "Kent, MI",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 329,
+      "total": 329,
+      "perishable_load_tons": 44.184,
+      "distance_miles": 963.6861394527126,
+      "temp_c": 4.904890131035321,
+      "humidity_pct": 11.334461599247325,
+      "delay_hours": 2.7929039775806235,
+      "temp_deviation_abs": 0.9048901310353212,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 118979,
+      "row_index": 118978,
+      "sim_ori": 39001,
+      "sim_des": 18151,
+      "name_ori": "Adams, OH",
+      "name_des": "Steuben, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 12,
+      "total": 12,
+      "perishable_load_tons": 2936.65,
+      "distance_miles": 1333.6995070368207,
+      "temp_c": 44.66372718356128,
+      "humidity_pct": 74.84598708290802,
+      "delay_hours": 2.859206195591211,
+      "temp_deviation_abs": 40.66372718356128,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 49432,
+      "row_index": 49431,
+      "sim_ori": 5001,
+      "sim_des": 13031,
+      "name_ori": "Arkansas, AR",
+      "name_des": "Bulloch, GA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1184,
+      "total": 1184,
+      "perishable_load_tons": 397.4095000000002,
+      "distance_miles": 1921.8375448020772,
+      "temp_c": 46.77266213284945,
+      "humidity_pct": 61.65805697851982,
+      "delay_hours": 1.4152601184748148,
+      "temp_deviation_abs": 42.77266213284945,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 2782601,
+      "row_index": 2782600,
+      "sim_ori": 27075,
+      "sim_des": 42133,
+      "name_ori": "Lake, MN",
+      "name_des": "York, PA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 8,
+      "total": 8,
+      "perishable_load_tons": 49.73,
+      "distance_miles": 1605.714625806785,
+      "temp_c": -15.256993708069484,
+      "humidity_pct": 89.10812827008478,
+      "delay_hours": 2.469552025508432,
+      "temp_deviation_abs": 19.256993708069487,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 240212,
+      "row_index": 240211,
+      "sim_ori": 19163,
+      "sim_des": 31141,
+      "name_ori": "Scott, IA",
+      "name_des": "Platte, NE",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 2649830,
+      "total": 2649830,
+      "perishable_load_tons": 2800.0,
+      "distance_miles": 855.7292336654555,
+      "temp_c": 4.242058272952454,
+      "humidity_pct": 89.53420568565434,
+      "delay_hours": 5.50421074670021,
+      "temp_deviation_abs": 0.2420582729524536,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 1427081,
+      "row_index": 1427080,
+      "sim_ori": 13243,
+      "sim_des": 1037,
+      "name_ori": "Randolph, GA",
+      "name_des": "Coosa, AL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 83291,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 83291,
+      "perishable_load_tons": 314.9559999999999,
+      "distance_miles": 1213.1107970564103,
+      "temp_c": 8.345191047882524,
+      "humidity_pct": 6.486157962748507,
+      "delay_hours": 1.486910852983222,
+      "temp_deviation_abs": 4.345191047882524,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 4952581,
+      "row_index": 4952580,
+      "sim_ori": 39109,
+      "sim_des": 18053,
+      "name_ori": "Miami, OH",
+      "name_des": "Grant, IN",
+      "SCTG.1": 0,
+      "SCTG.2": 1265510,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 388,
+      "total": 1265898,
+      "perishable_load_tons": 966.4209999999998,
+      "distance_miles": 1374.179878766493,
+      "temp_c": 7.985143025691562,
+      "humidity_pct": 6.434738161581032,
+      "delay_hours": 0.1466523052327631,
+      "temp_deviation_abs": 3.9851430256915625,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 5819145,
+      "row_index": 5819144,
+      "sim_ori": 39057,
+      "sim_des": 34041,
+      "name_ori": "Greene, OH",
+      "name_des": "Warren, NJ",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 1051,
+      "total": 1051,
+      "perishable_load_tons": 409.469,
+      "distance_miles": 653.4520240700556,
+      "temp_c": 99.03110492190925,
+      "humidity_pct": 62.69312764017005,
+      "delay_hours": 0.4377213253814163,
+      "temp_deviation_abs": 95.03110492190925,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5906353,
+      "row_index": 5906352,
+      "sim_ori": 12085,
+      "sim_des": 12031,
+      "name_ori": "Martin, FL",
+      "name_des": "Duval, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 391425,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 75,
+      "total": 391500,
+      "perishable_load_tons": 16599.699999999993,
+      "distance_miles": 631.0556092168954,
+      "temp_c": 5.2064244720750885,
+      "humidity_pct": 100.17099551389042,
+      "delay_hours": 5.230920604729425,
+      "temp_deviation_abs": 1.2064244720750883,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 564508,
+      "row_index": 564507,
+      "sim_ori": 48401,
+      "sim_des": 34027,
+      "name_ori": "Rusk, TX",
+      "name_des": "Morris, NJ",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 381,
+      "total": 381,
+      "perishable_load_tons": 375.0,
+      "distance_miles": 839.5760878261958,
+      "temp_c": 21.332175963736137,
+      "humidity_pct": 86.9845525896468,
+      "delay_hours": 0.9118687562324852,
+      "temp_deviation_abs": 17.332175963736137,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 9311846,
+      "row_index": 9311845,
+      "sim_ori": 37043,
+      "sim_des": 13115,
+      "name_ori": "Clay, NC",
+      "name_des": "Floyd, GA",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 2434590,
+      "total": 2434590,
+      "perishable_load_tons": 10086.39,
+      "distance_miles": 1890.8804926478083,
+      "temp_c": 8.16867298904785,
+      "humidity_pct": 100.52354046969576,
+      "delay_hours": 3.0243411517162166,
+      "temp_deviation_abs": 4.168672989047851,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 1
+    },
+    {
+      "source_row_id": 5477829,
+      "row_index": 5477828,
+      "sim_ori": 37097,
+      "sim_des": 17019,
+      "name_ori": "Iredell, NC",
+      "name_des": "Champaign, IL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 2762751,
+      "total": 2762751,
+      "perishable_load_tons": 586.429,
+      "distance_miles": 850.5194294852844,
+      "temp_c": -18.3543331783406,
+      "humidity_pct": 71.34780773539788,
+      "delay_hours": 1.2307155864495942,
+      "temp_deviation_abs": 22.3543331783406,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 0,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 771996,
+      "row_index": 771995,
+      "sim_ori": 36121,
+      "sim_des": 36045,
+      "name_ori": "Wyoming, NY",
+      "name_des": "Jefferson, NY",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 0,
+      "SCTG.6": 0,
+      "SCTG.7": 845492,
+      "total": 845492,
+      "perishable_load_tons": 1032.4015000000004,
+      "distance_miles": 1646.7950775149195,
+      "temp_c": -0.678314021658325,
+      "humidity_pct": 86.6260062486055,
+      "delay_hours": 2.046890828002757,
+      "temp_deviation_abs": 4.678314021658325,
+      "cold_chain_failure": 1,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    },
+    {
+      "source_row_id": 8986964,
+      "row_index": 8986963,
+      "sim_ori": 13059,
+      "sim_des": 12111,
+      "name_ori": "Clarke, GA",
+      "name_des": "St. Lucie, FL",
+      "SCTG.1": 0,
+      "SCTG.2": 0,
+      "SCTG.3": 0,
+      "SCTG.4": 0,
+      "SCTG.5": 21,
+      "SCTG.6": 0,
+      "SCTG.7": 0,
+      "total": 21,
+      "perishable_load_tons": 406.63450000000006,
+      "distance_miles": 1172.40718584816,
+      "temp_c": 5.71927073877963,
+      "humidity_pct": 64.5800926895001,
+      "delay_hours": 2.635913934936756,
+      "temp_deviation_abs": 1.7192707387796302,
+      "cold_chain_failure": 0,
+      "delay_risk_event": 1,
+      "spoilage_event": 0
+    }
+  ]
+}
