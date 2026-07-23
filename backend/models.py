@@ -20,6 +20,8 @@ def get_connection():
     Create and return a new database connection.
     Uses the DATABASE_URL environment variable for the Neon connection string.
     """
+    if not DATABASE_URL:
+        raise RuntimeError("DATABASE_URL environment variable is not set.")
     return psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
 
 
