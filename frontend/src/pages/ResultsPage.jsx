@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ResultCard from '../components/ResultCard';
 import RiskPanel from '../components/RiskPanel';
+import LimitationsPanel from '../components/LimitationsPanel';
+import DecisionTreeConclusion from '../components/DecisionTreeConclusion';
 import { ALL_FOODS } from '../data/foods';
 import { predictRisks } from '../ml_models/predict';
 import './ResultsPage.css';
@@ -25,6 +27,7 @@ function ResultsPage({ results, selectedFoods, advancedSettings }) {
         perishableLoadTons: advancedSettings.perishableLoadTons,
         distanceMiles: results.distance_miles,
         tempC: results.optimal_temp,
+        tempDeviation: advancedSettings.tempDeviation,
         humidityPct: advancedSettings.humidityPct,
         delayHours: advancedSettings.delayHours,
       });
@@ -93,6 +96,9 @@ function ResultsPage({ results, selectedFoods, advancedSettings }) {
         </div>
       </div>
 
+      {/* Assumptions and Limitations Panel */}
+      <LimitationsPanel />
+
       {/* Result Cards Grid */}
       <div className="results-grid" id="results-grid">
         <ResultCard
@@ -131,6 +137,13 @@ function ResultsPage({ results, selectedFoods, advancedSettings }) {
 
       {/* AI Risk Assessment Panel */}
       <RiskPanel predictions={predictions} />
+
+      {/* Decision Tree / Flow Conclusion */}
+      <DecisionTreeConclusion
+        predictions={predictions}
+        results={results}
+        advancedSettings={advancedSettings}
+      />
 
       {/* Selected Foods Summary */}
       <div className="foods-summary glass">

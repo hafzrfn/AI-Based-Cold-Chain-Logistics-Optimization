@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from calculator import calculate_logistics
 from models import get_all_foods, save_calculation_result
-from operations import optimize_milk_run, calculate_cpm_pert
+from cold_chain_analyzer import ColdChainLogisticsAnalyzer
 
 # ========== APP SETUP ==========
 
@@ -137,21 +137,28 @@ def get_network_insights():
             return jsonify(json.load(f))
     return jsonify({'error': 'Insights not generated yet'}), 404
 
-@app.route('/api/milkrun', methods=['POST'])
-def milkrun():
-    """Calculates optimized milk run route for given waypoints."""
+@app.route('/api/operations_analysis', methods=['POST'])
+def operations_analysis():
+    """Runs complete Cold Chain Operations Analysis using dynamic route data."""
     data = request.get_json()
-    if not data or 'waypoints' not in data:
-        return jsonify({'error': 'No waypoints provided'}), 400
-    
-    result = optimize_milk_run(data['waypoints'])
-    return jsonify(result)
-
-@app.route('/api/schedule', methods=['GET'])
-def schedule():
-    """Returns CPM and PERT analysis for cold chain operations."""
-    result = calculate_cpm_pert()
-    return jsonify(result)
+    if not data or 'waypoints' not in data or 'time_hours' not in data:
+        return jsonify({'error': 'Missing waypoints or time_hours in request'}), 400
+        
+    try:
+        analyzer = ColdChainLogisticsAnalyzer()
+        load_tons = data.get('perishableLoadTons', 5.0)
+        
+        # Configure the dynamic scenario
+        analyzer.configure_dynamic_scenario(data['waypoints'], data['time_hours'], load_tons)
+        
+        # Run and get JSON results
+        results = analyzer.get_json_results()
+        
+        return jsonify(results)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
 
 # ========== MAIN ==========
 

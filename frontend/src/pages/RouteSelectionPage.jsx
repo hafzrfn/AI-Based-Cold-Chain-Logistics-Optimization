@@ -131,6 +131,17 @@ function RouteSelectionPage({ selectedFoods, onResults, advancedSettings, setAdv
                     onChange={(e) => setAdvancedSettings({...advancedSettings, delayHours: parseFloat(e.target.value)})}
                   />
                 </div>
+                <div className="setting-group" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
+                    Temperature Deviation: {advancedSettings.tempDeviation} °C
+                  </label>
+                  <input
+                    type="range"
+                    min="0" max="10" step="0.5"
+                    value={advancedSettings.tempDeviation}
+                    onChange={(e) => setAdvancedSettings({...advancedSettings, tempDeviation: parseFloat(e.target.value)})}
+                  />
+                </div>
               </div>
             )}
           </div>

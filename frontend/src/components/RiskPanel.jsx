@@ -30,18 +30,49 @@ function getGaugeColor(alertLevel) {
 }
 
 /**
+ * Map risk label to the factors key.
+ */
+const RISK_FACTOR_KEY = {
+  'Spoilage Risk': 'spoilage',
+  'Delay Risk': 'delay',
+  'Cold Chain Failure': 'failure',
+};
+
+/**
+ * Color for factor impact levels.
+ */
+function getFactorBarColor(level) {
+  if (level === 'high') return 'linear-gradient(90deg, #ef4444, #f87171)';
+  if (level === 'moderate') return 'linear-gradient(90deg, #f59e0b, #fbbf24)';
+  return 'linear-gradient(90deg, #10b981, #34d399)';
+}
+
+/**
+ * Format a factor value for display.
+ */
+function formatFactorValue(value, unit) {
+  if (typeof value !== 'number') return `${value} ${unit}`;
+  if (Math.abs(value) >= 1000) return `${value.toLocaleString()} ${unit}`;
+  if (Number.isInteger(value)) return `${value} ${unit}`;
+  return `${value.toFixed(1)} ${unit}`;
+}
+
+/**
  * AI Risk Assessment Panel
  * Renders three risk probability bars, a composite score gauge, and an alert badge.
+ * Now also renders per-risk contributing factor details.
  *
  * @param {object} predictions - Output from predictRisks()
  * @param {number} predictions.spoilage - Spoilage risk percentage (0–100)
  * @param {number} predictions.delay - Delay risk percentage (0–100)
  * @param {number} predictions.failure - Cold chain failure percentage (0–100)
+ * @param {object} predictions.factors - Per-risk factor analysis
  * @param {number} predictions.compositeScore - Weighted composite (0–100)
  * @param {string} predictions.alertLevel - 'Low' | 'Medium' | 'High'
  */
 function RiskPanel({ predictions }) {
   const [animated, setAnimated] = useState(false);
+  const [expandedCards, setExpandedCards] = useState({});
 
   // Trigger bar animations after mount
   useEffect(() => {
@@ -51,7 +82,7 @@ function RiskPanel({ predictions }) {
 
   if (!predictions) return null;
 
-  const { spoilage, delay, failure, compositeScore, alertLevel } = predictions;
+  const { spoilage, delay, failure, factors, compositeScore, alertLevel } = predictions;
 
   // SVG gauge calculations (circumference of r=42 circle)
   const circumference = 2 * Math.PI * 42;
@@ -62,6 +93,10 @@ function RiskPanel({ predictions }) {
     { label: 'Delay Risk', icon: '⏳', value: delay },
     { label: 'Cold Chain Failure', icon: '❄️', value: failure },
   ];
+
+  const toggleCard = (label) => {
+    setExpandedCards((prev) => ({ ...prev, [label]: !prev[label] }));
+  };
 
   return (
     <div className="risk-panel" id="risk-panel">
@@ -85,6 +120,10 @@ function RiskPanel({ predictions }) {
       <div className="risk-grid">
         {risks.map((risk) => {
           const riskClass = getRiskClass(risk.value);
+          const factorKey = RISK_FACTOR_KEY[risk.label];
+          const riskFactors = factors ? factors[factorKey] : null;
+          const isExpanded = expandedCards[risk.label];
+
           return (
             <div key={risk.label} className={`risk-card glass ${riskClass}`}>
               <div className="risk-card-header">
@@ -100,6 +139,54 @@ function RiskPanel({ predictions }) {
                   style={{ width: animated ? `${Math.min(risk.value, 100)}%` : '0%' }}
                 />
               </div>
+
+              {/* Contributing Factors */}
+              {riskFactors && (
+                <div className="risk-factors-section">
+                  <button
+                    className="risk-factors-toggle"
+                    onClick={() => toggleCard(risk.label)}
+                    aria-expanded={isExpanded}
+                  >
+                    <span className="risk-factors-toggle-label">
+                      📊 Contributing Factors
+                    </span>
+                    <span className={`risk-factors-chevron ${isExpanded ? 'expanded' : ''}`}>
+                      ▾
+                    </span>
+                  </button>
+
+                  <div className={`risk-factors-content ${isExpanded ? 'expanded' : ''}`}>
+                    {riskFactors.map((factor, idx) => (
+                      <div key={idx} className="risk-factor-row">
+                        <div className="risk-factor-info">
+                          <span className="risk-factor-name">{factor.feature}</span>
+                          <span className={`risk-factor-level ${factor.level}`}>
+                            {factor.level}
+                          </span>
+                        </div>
+                        <div className="risk-factor-detail">
+                          <span className="risk-factor-value">
+                            {formatFactorValue(factor.value, factor.unit)}
+                          </span>
+                          <span className="risk-factor-direction">
+                            {factor.direction === 'increases' ? '↑' : '↓'} risk
+                          </span>
+                        </div>
+                        <div className="risk-factor-bar-track">
+                          <div
+                            className="risk-factor-bar-fill"
+                            style={{
+                              width: `${factor.relativeStrength}%`,
+                              background: getFactorBarColor(factor.level),
+                            }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           );
         })}
@@ -141,3 +228,4 @@ function RiskPanel({ predictions }) {
 }
 
 export default RiskPanel;
+

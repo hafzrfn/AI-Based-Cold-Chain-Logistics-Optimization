@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import FoodSelectionPage from './pages/FoodSelectionPage';
 import RouteSelectionPage from './pages/RouteSelectionPage';
 import ResultsPage from './pages/ResultsPage';
-import DashboardPage from './pages/DashboardPage';
 import OperationsPage from './pages/OperationsPage';
 import './App.css';
 
@@ -37,6 +36,7 @@ function App() {
     perishableLoadTons: 5.0,
     humidityPct: 75,
     delayHours: 2.5,
+    tempDeviation: 0.0,
   });
 
   /**
@@ -93,13 +93,15 @@ function App() {
               />
             }
           />
-          <Route
-            path="/dashboard"
-            element={<DashboardPage />}
-          />
+
           <Route
             path="/operations"
-            element={<OperationsPage />}
+            element={
+              <OperationsPage 
+                results={results} 
+                advancedSettings={advancedSettings} 
+              />
+            }
           />
         </Routes>
       </main>

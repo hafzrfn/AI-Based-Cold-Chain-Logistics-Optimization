@@ -54,9 +54,7 @@ function Navbar({ theme, toggleTheme }) {
         <Link to="/operations" className={`dashboard-link ${location.pathname === '/operations' ? 'active' : ''}`}>
           ⚙️ Operations Planning
         </Link>
-        <Link to="/dashboard" className={`dashboard-link ${location.pathname === '/dashboard' ? 'active' : ''}`}>
-          📈 Research Dashboard
-        </Link>
+
       </div>
     </nav>
   );

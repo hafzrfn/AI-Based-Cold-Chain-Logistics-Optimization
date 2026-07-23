@@ -242,4 +242,5 @@ def calculate_logistics(foods, waypoints, driving_distance_km=None):
         'origin_name': waypoints[0].get('name', 'Unknown'),
         'destination_name': waypoints[-1].get('name', 'Unknown') if len(waypoints) > 1 else 'Unknown',
         'stop_count': len(waypoints),
+        'waypoints': waypoints,
     }

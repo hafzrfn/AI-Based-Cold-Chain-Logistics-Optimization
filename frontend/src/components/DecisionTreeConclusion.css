@@ -1,0 +1,325 @@
+/* ============================================
+   Decision Flow & Logic Tree
+   ============================================ */
+
+.decision-tree-container {
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 800ms;
+  opacity: 0;
+}
+
+.decision-tree-container.active {
+  opacity: 1;
+}
+
+.tree-header {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.tree-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+}
+
+.tree-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Diagram Layout --- */
+
+.tree-diagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  margin: var(--spacing-xl) 0;
+  min-height: 400px;
+  gap: 0;
+}
+
+.tree-layer {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
+}
+
+.layer-label {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* --- Connectors --- */
+
+.tree-connector-column {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  min-width: 30px;
+}
+
+.connector-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.connector-path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1.5;
+  stroke-dasharray: 4, 4;
+  transition: stroke 0.3s ease;
+}
+
+.decision-tree-container.active .connector-path {
+  stroke: rgba(255, 255, 255, 0.15);
+}
+
+.weight-label-overlay {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* --- Nodes --- */
+
+.tree-node {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.tree-node:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.node-emoji {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.node-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.node-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.node-value {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.node-sub {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* --- Layer Specific Node Styles --- */
+
+/* Input Layer */
+.input-node {
+  border-left: 3px solid var(--color-accent);
+}
+
+/* Models Layer */
+.model-node {
+  border-left: 3px solid var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  padding-bottom: var(--spacing-sm);
+}
+
+.model-node .node-info {
+  width: 100%;
+}
+
+.model-node.low-risk {
+  border-left-color: var(--color-success);
+}
+.model-node.medium-risk {
+  border-left-color: var(--color-warning);
+}
+.model-node.high-risk {
+  border-left-color: var(--color-danger);
+}
+
+.node-formula {
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Aggregation Layer */
+.decision-node {
+  border-left: 3px solid var(--color-warning);
+}
+
+/* Conclusion Layer */
+.final-node {
+  border: 2px solid var(--color-border);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.node-score {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.node-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px var(--spacing-sm);
+  border-radius: var(--radius-full);
+}
+
+.node-badge.low {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+}
+.node-badge.medium {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+}
+.node-badge.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+/* --- Explanation --- */
+
+.tree-logic-explanation {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.explanation-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-secondary);
+}
+
+.explanation-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 900px) {
+  .tree-diagram {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    min-height: auto;
+  }
+
+  .tree-layer {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .layer-label {
+    top: -20px;
+  }
+
+  .tree-connector-column {
+    display: none;
+  }
+
+  .tree-node {
+    width: calc(50% - var(--spacing-md));
+    min-width: 180px;
+  }
+
+  .final-node {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tree-layer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tree-node {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { MapContainer, TileLayer, Polyline, Tooltip as LeafletTooltip } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import RouteTable from '../components/RouteTable';
 import HubBarChart from '../components/HubBarChart';
+import RouteTable from '../components/RouteTable';
 import MLDatasetTable from '../components/MLDatasetTable';
 import './DashboardPage.css';
 
-const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app'; // Can be env var
+const API_BASE_URL = 'https://ai-based-cold-chain-logistics-optim-virid.vercel.app';
 
+/**
+ * Research Dashboard Page.
+ * Shows pre-computed network insights from the backend.
+ */
 function DashboardPage() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeTab, setActiveTab] = useState('overview'); // 'overview', 'network', 'ml'
+  const [activeTab, setActiveTab] = useState('network');
 
   useEffect(() => {
     async function fetchData() {
@@ -24,160 +24,91 @@ function DashboardPage() {
         );
         setData(res.data);
       } catch (err) {
-        console.error(err);
         setError('Failed to load research data.');
-      } finally {
-        setLoading(false);
+        console.error(err);
       }
     }
     fetchData();
   }, []);
 
-  if (loading) {
-    return <div className="dashboard-page"><div className="loading-spinner">Loading network data...</div></div>;
-  }
-
-  if (error) {
-    return <div className="dashboard-page"><div className="error-message">{error}</div></div>;
-  }
-
-  const { top_routes, top_hubs, ml_dataset_sample } = data;
-
-  const getPriorityColor = (tier) => {
-    if (tier === 'High') return '#ef4444'; // critical red
-    if (tier === 'Medium') return '#f59e0b'; // warning amber
-    return '#10b981'; // nominal green
-  };
-
-  const highPriorityCount = top_routes.filter(r => r.priority_tier === 'High').length;
-  const topHubName = top_hubs[0]?.county || 'N/A';
-  const totalCost = top_routes.reduce((sum, r) => sum + r.total_cost, 0);
+  const tabs = [
+    { id: 'network', label: '🕸️ Network Hubs' },
+    { id: 'routes',  label: '🚛 Top Routes'   },
+    { id: 'dataset', label: '📊 ML Dataset'   },
+  ];
 
   return (
-    <div className="dashboard-page animate-fade-in">
+    <div className="dashboard-page">
       <header className="dashboard-header">
         <h1 className="dashboard-title">Research Dashboard</h1>
         <p className="dashboard-subtitle">
-          Macro-level analysis of the FoodFlows 2017 supply chain
+          Pre-computed network analysis of the Cold Chain logistics graph
         </p>
-
-        {/* Tab Navigation */}
-        <div className="dashboard-tabs">
-          <button 
-            className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
-            onClick={() => setActiveTab('overview')}
-          >
-            📊 Executive Overview
-          </button>
-          <button 
-            className={`tab-btn ${activeTab === 'network' ? 'active' : ''}`}
-            onClick={() => setActiveTab('network')}
-          >
-            🗺️ Network Analysis
-          </button>
-          <button 
-            className={`tab-btn ${activeTab === 'ml' ? 'active' : ''}`}
-            onClick={() => setActiveTab('ml')}
-          >
-            🤖 ML Training Context
-          </button>
-        </div>
       </header>
 
-      <div className="tab-content">
-        {/* TAB 1: EXECUTIVE OVERVIEW */}
-        {activeTab === 'overview' && (
-          <div className="animate-fade-in-up">
-            <div className="kpi-grid">
-              <div className="kpi-card glass">
-                <div className="kpi-label">High Priority Routes</div>
-                <div className="kpi-value" style={{ color: '#ef4444' }}>{highPriorityCount}</div>
-              </div>
-              <div className="kpi-card glass">
-                <div className="kpi-label">Top Centrality Hub</div>
-                <div className="kpi-value" style={{ color: '#3b82f6' }}>{topHubName}</div>
-              </div>
-              <div className="kpi-card glass">
-                <div className="kpi-label">Est. Network Cost (Top 100)</div>
-                <div className="kpi-value" style={{ color: '#10b981' }}>${(totalCost / 1000000).toFixed(1)}M</div>
-              </div>
+      {error && (
+        <div className="dashboard-error glass">
+          <span>⚠️</span> {error}
+        </div>
+      )}
+
+      {!data && !error && (
+        <div className="dashboard-loading">
+          <p>Loading research data…</p>
+        </div>
+      )}
+
+      {data && (
+        <>
+          {/* Summary KPI row */}
+          <div className="dashboard-kpis">
+            <div className="kpi-box glass">
+              <span className="kpi-number">{data.summary?.total_nodes?.toLocaleString() ?? '—'}</span>
+              <span className="kpi-label">Counties / Nodes</span>
             </div>
-
-            <div style={{ marginTop: 'var(--spacing-xl)' }}>
-              <h3 style={{ marginBottom: 'var(--spacing-md)' }}>Top Priority Routes Database (FoodFlows 2017)</h3>
-              <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-md)', fontSize: 'var(--font-size-sm)' }}>
-                This table highlights the most financially sensitive corridors, serving as the basis for logistics prioritization.
-              </p>
-              <RouteTable routes={top_routes} />
+            <div className="kpi-box glass">
+              <span className="kpi-number">{data.summary?.total_edges?.toLocaleString() ?? '—'}</span>
+              <span className="kpi-label">Route Edges</span>
             </div>
-          </div>
-        )}
-
-        {/* TAB 2: NETWORK ANALYSIS */}
-        {activeTab === 'network' && (
-          <div className="animate-fade-in-up">
-            <div className="dashboard-content">
-              {/* Map Overlay */}
-              <div className="dashboard-map glass">
-                <h3 style={{ padding: 'var(--spacing-md)' }}>Priority Route Network Overlay</h3>
-                {/* Note: Leaflet maps sometimes struggle to render correctly if initialized while hidden. 
-                    Because we conditionally render this tab, the map initializes visibly, avoiding issues. */}
-                <MapContainer
-                  center={[39.8283, -98.5795]} // Center of US
-                  zoom={4}
-                  className="leaflet-dashboard-map"
-                  scrollWheelZoom={false}
-                >
-                  <TileLayer
-                    attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-                    url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-                  />
-                  {top_routes.map((route, idx) => (
-                    <Polyline
-                      key={idx}
-                      positions={[
-                        [route.origin_coords.lat, route.origin_coords.lng],
-                        [route.dest_coords.lat, route.dest_coords.lng]
-                      ]}
-                      pathOptions={{
-                        color: getPriorityColor(route.priority_tier),
-                        weight: route.priority_tier === 'High' ? 4 : 2,
-                        opacity: 0.7,
-                      }}
-                    >
-                      <LeafletTooltip>
-                        {route.origin_county} → {route.dest_county} <br/>
-                        Flow: {Math.round(route.ColdChainFlow).toLocaleString()} tons <br/>
-                        Tier: {route.priority_tier}
-                      </LeafletTooltip>
-                    </Polyline>
-                  ))}
-                </MapContainer>
-              </div>
-
-              {/* Hub Chart */}
-              <HubBarChart hubs={top_hubs} />
+            <div className="kpi-box glass">
+              <span className="kpi-number">{data.summary?.total_flow_kg != null
+                ? (data.summary.total_flow_kg / 1e9).toFixed(1) + ' B kg'
+                : '—'}</span>
+              <span className="kpi-label">Total Flow</span>
+            </div>
+            <div className="kpi-box glass">
+              <span className="kpi-number">{data.top_hubs?.length ?? '—'}</span>
+              <span className="kpi-label">Top Hubs Identified</span>
             </div>
           </div>
-        )}
 
-        {/* TAB 3: ML CONTEXT */}
-        {activeTab === 'ml' && (
-          <div className="animate-fade-in-up">
-            {ml_dataset_sample && ml_dataset_sample.length > 0 ? (
-              <div style={{ marginTop: 'var(--spacing-md)' }}>
-                <h3 style={{ marginBottom: 'var(--spacing-xs)' }}>Machine Learning Training Data (Sample)</h3>
-                <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-md)', fontSize: 'var(--font-size-sm)' }}>
-                  This table displays a 100-row sample of the synthetically generated <code>integrated_empirical_dataset.csv</code>. This data was specifically engineered to train the client-side predictive Logistic Regression models for Spoilage, Delay, and Failure risk.
-                </p>
-                <MLDatasetTable dataset={ml_dataset_sample} />
-              </div>
-            ) : (
-              <p>No ML training data available.</p>
+          {/* Tab bar */}
+          <div className="dashboard-tabs">
+            {tabs.map(t => (
+              <button
+                key={t.id}
+                className={`tab-btn ${activeTab === t.id ? 'active' : ''}`}
+                onClick={() => setActiveTab(t.id)}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab content */}
+          <div className="dashboard-content glass">
+            {activeTab === 'network' && data.top_hubs && (
+              <HubBarChart hubs={data.top_hubs} />
+            )}
+            {activeTab === 'routes' && data.top_routes && (
+              <RouteTable routes={data.top_routes} />
+            )}
+            {activeTab === 'dataset' && data.sample_records && (
+              <MLDatasetTable records={data.sample_records} />
             )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 }

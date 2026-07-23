@@ -68,7 +68,7 @@ function MapClickHandler({ waypoints, onSetWaypoints }) {
       }
 
       const location = { lat, lng, name };
-      onSetWaypoints([...waypoints, location]);
+      onSetWaypoints((prev) => [...prev, location]);
     },
   });
 
@@ -91,15 +91,18 @@ function MapSelector({ waypoints, onSetWaypoints, onSetDistance }) {
       // Build coordinates string: lng,lat;lng,lat...
       const coordsString = waypoints.map(wp => `${wp.lng},${wp.lat}`).join(';');
       
-      // Use OSRM Trip API (TSP solver)
-      const url = `https://router.project-osrm.org/trip/v1/driving/${coordsString}?source=first&roundtrip=false&geometries=geojson`;
+      const isTrip = waypoints.length > 2;
+      const url = isTrip
+        ? `https://router.project-osrm.org/trip/v1/driving/${coordsString}?source=first&roundtrip=false&geometries=geojson`
+        : `https://router.project-osrm.org/route/v1/driving/${coordsString}?overview=full&geometries=geojson`;
       
       fetch(url)
         .then((res) => res.json())
         .then((data) => {
           if (!active) return;
-          if (data.trips && data.trips.length > 0) {
-            const trip = data.trips[0];
+          const routes = isTrip ? data.trips : data.routes;
+          if (routes && routes.length > 0) {
+            const trip = routes[0];
             const distKm = trip.distance / 1000;
             
             setDistance(distKm.toFixed(0));
@@ -109,13 +112,16 @@ function MapSelector({ waypoints, onSetWaypoints, onSetDistance }) {
             const coords = trip.geometry.coordinates.map((c) => [c[1], c[0]]);
             setPolylinePositions(coords);
             
-            // Reorder waypoints based on OSRM optimization
-            if (data.waypoints) {
+            // Reorder waypoints based on OSRM optimization (only Trip API gives waypoints reordering)
+            if (isTrip && data.waypoints) {
               const sortedIndices = data.waypoints
                 .map((wp, i) => ({ ...wp, original_index: i }))
                 .sort((a, b) => a.waypoint_index - b.waypoint_index)
                 .map(wp => wp.original_index);
               setOptimizedOrder(sortedIndices);
+            } else {
+              // For 2 points, order is just [0, 1]
+              setOptimizedOrder(waypoints.map((_, i) => i));
             }
           }
         })
@@ -159,7 +165,7 @@ function MapSelector({ waypoints, onSetWaypoints, onSetDistance }) {
               {distance && <span className="distance-badge">{Number(distance).toLocaleString()} km</span>}
             </p>
             <button 
-              onClick={() => onSetWaypoints([])}
+              onClick={() => { setOptimizedOrder([]); setPolylinePositions([]); setDistance(null); onSetWaypoints([]); }}
               style={{
                 background: 'rgba(255, 255, 255, 0.2)',
                 border: 'none',
