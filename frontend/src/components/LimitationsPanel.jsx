@@ -18,8 +18,8 @@ const LIMITATIONS = [
   },
   {
     icon: '📏',
-    title: 'Straight-Line Distance',
-    detail: 'Distance is Haversine (crow-flies), not actual road routing — typically 15–30% shorter than reality.',
+    title: 'Road Distance via OSRM',
+    detail: 'Route distances use real road routing (OSRM engine). Haversine straight-line distance is only used as a fallback if the routing API is unavailable.',
   },
   {
     icon: '🤖',
